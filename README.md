@@ -65,5 +65,6 @@ README〜ER図 -12/28
 β版リリース -2/15
 本番リリース -2月末
 
-### 
+### 画面遷移図
+URL: "https://xd.adobe.com/view/7a3907ca-3987-4e6d-b7a5-4333a36e5e90-2f6a/grid/"
 
