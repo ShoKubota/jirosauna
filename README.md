@@ -69,3 +69,5 @@ README〜ER図 -12/28
 ### 画面遷移図
 URL（修正後）: "https://xd.adobe.com/view/7a3907ca-3987-4e6d-b7a5-4333a36e5e90-2f6a/"
 
+### ER図
+URL : "https://gyazo.com/e6d322fc150dd7697046e5c44599a42a"
