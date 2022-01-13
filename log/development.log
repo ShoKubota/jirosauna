@@ -1,0 +1,9 @@
+  [1m[35m (196.5ms)[0m  [1m[35mCREATE DATABASE "jirosauna_development" ENCODING = 'unicode'[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE DATABASE "jirosauna_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2022-01-13 16:53:27 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 599)
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 4731)
+
+
