@@ -1,0 +1,447 @@
+  [1m[35m (196.5ms)[0m  [1m[35mCREATE DATABASE "jirosauna_development" ENCODING = 'unicode'[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE DATABASE "jirosauna_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2022-01-13 16:53:27 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 599)
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 4731)
+
+
+Started GET "/" for ::1 at 2022-01-13 17:34:57 +0900
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: Connection refused
+	Is the server running locally and accepting connections on that socket?:
+
+Started POST "/__better_errors/22535377b4550355/variables" for ::1 at 2022-01-13 17:34:57 +0900
+Started GET "/" for ::1 at 2022-01-13 17:35:18 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.8ms | Allocations: 475)
+Completed 200 OK in 26ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 3614)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:14:03 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 491)
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3648)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:14:04 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 265)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 1180)
+
+
+Started GET "/index/home" for ::1 at 2022-01-13 21:14:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index/home"):
+  
+Started GET "/" for ::1 at 2022-01-13 21:14:51 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 152)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2022-01-13 21:14:53 +0900
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 1932ms
+Built at: 2022/01/13 21:14:55
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3991.1ms | Allocations: 25097)
+Completed 200 OK in 3994ms (Views: 3992.9ms | ActiveRecord: 0.0ms | Allocations: 26530)
+
+
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 10153)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 10870)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:42:23 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 9414)
+Completed 500 Internal Server Error in 47ms (Allocations: 10855)
+
+
+
+Sprockets::Rails::Helper::AssetNotFound - The asset "inter-font.css" is not present in the asset pipeline.:
+  app/views/layouts/application.html.erb:8
+
+Started POST "/__better_errors/5785bbcf9c68797a/variables" for ::1 at 2022-01-13 21:42:23 +0900
+Started GET "/" for ::1 at 2022-01-13 21:43:17 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 13690)
+Completed 200 OK in 56ms (Views: 49.9ms | Allocations: 15119)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:43:47 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3704)
+Completed 200 OK in 27ms (Views: 22.3ms | Allocations: 5091)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:44:06 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3153)
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 3644)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:44:07 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3704)
+Completed 200 OK in 22ms (Views: 17.5ms | Allocations: 5028)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:45:17 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3688)
+Completed 200 OK in 27ms (Views: 22.1ms | Allocations: 5064)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:45:37 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 364)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 23160)
+Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 26851)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:45:39 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3296)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 3854)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:46:20 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3679)
+Completed 200 OK in 34ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 5043)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:12 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 138b8ddc2c5cdf376971
+Version: webpack 4.46.0
+Time: 2458ms
+Built at: 2022/01/13 21:52:16
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-57a966b0eb31d177297d.js    161 KiB  application  [emitted] [immutable]  application
+js/application-57a966b0eb31d177297d.js.map    177 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-57a966b0eb31d177297d.js js/application-57a966b0eb31d177297d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 530 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 606 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 24.3 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 4418.2ms | Allocations: 7030)
+Completed 200 OK in 4422ms (Views: 4419.7ms | Allocations: 7528)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:18 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4881)
+Completed 200 OK in 23ms (Views: 21.1ms | Allocations: 5325)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:19 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 4882)
+Completed 200 OK in 26ms (Views: 23.4ms | Allocations: 5331)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:20 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 4888)
+Completed 200 OK in 28ms (Views: 26.5ms | Allocations: 5334)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:20 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4881)
+Completed 200 OK in 23ms (Views: 21.0ms | Allocations: 5325)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:20 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4889)
+Completed 200 OK in 25ms (Views: 22.6ms | Allocations: 5340)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:52:21 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4881)
+Completed 200 OK in 21ms (Views: 19.8ms | Allocations: 5325)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:59:05 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5441)
+Completed 200 OK in 21ms (Views: 17.6ms | Allocations: 6772)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:59:07 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4882)
+Completed 200 OK in 19ms (Views: 17.2ms | Allocations: 5373)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:59:33 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8242)
+Completed 200 OK in 24ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 11934)
+
+
+Started GET "/" for ::1 at 2022-01-13 21:59:34 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 5027)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 5585)
+
+
+Started GET "/" for ::1 at 2022-01-13 22:37:27 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 365)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 6438)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 10130)
+
+
+Started GET "/" for ::1 at 2022-01-13 22:57:09 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6435)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 10125)
+
+
+Started GET "/" for ::1 at 2022-01-13 22:57:12 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3278)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 3837)
+
+
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE DATABASE "jirosauna_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "jirosauna_test" ENCODING = 'unicode'[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7068466044571288560)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-13 13:57:48.350848"], ["updated_at", "2022-01-13 13:57:48.350848"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7068466044571288560)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-01-13 22:58:00 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3361)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 4148)
+
+
+Started GET "/home/index" for ::1 at 2022-01-13 22:58:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/home/index"):
+  
+Started GET "/" for ::1 at 2022-01-13 23:03:13 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3280)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 3814)
+
+
+Started GET "/" for ::1 at 2022-01-13 23:03:16 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3143)
+Completed 200 OK in 17ms (Views: 15.2ms | Allocations: 3587)
+
+
+Started GET "/" for ::1 at 2022-01-13 23:03:17 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3143)
+Completed 200 OK in 16ms (Views: 14.6ms | Allocations: 3587)
+
+
+Started GET "/" for ::1 at 2022-01-13 23:03:17 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3143)
+Completed 200 OK in 16ms (Views: 14.0ms | Allocations: 3587)
+
+
+Started GET "/" for ::1 at 2022-01-13 23:03:18 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5372)
+Completed 200 OK in 19ms (Views: 17.1ms | Allocations: 5854)
+
+
+Started GET "/" for ::1 at 2022-01-13 23:03:18 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3143)
+Completed 200 OK in 14ms (Views: 12.4ms | Allocations: 3587)
+
+
+Started GET "/" for ::1 at 2022-01-13 23:03:18 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3152)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 3598)
+
+
+Started GET "/" for ::1 at 2022-01-14 11:54:54 +0900
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6433)
+Completed 200 OK in 22ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 10120)
+
+
+Started GET "/" for ::1 at 2022-01-14 11:54:55 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3269)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3826)
+
+
+Started GET "/" for ::1 at 2022-01-14 11:55:51 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3678)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5112)
+
+
+Started GET "/" for ::1 at 2022-01-14 11:57:09 +0900
+
+ActionController::RoutingError - uninitialized constant HomeController:
+
+Started POST "/__better_errors/edfa24c065b51066/variables" for ::1 at 2022-01-14 11:57:09 +0900
+Started GET "/" for ::1 at 2022-01-14 11:58:14 +0900
+
+ActionController::RoutingError - uninitialized constant HomeController:
+
+Started POST "/__better_errors/7109ab38ee6e03db/variables" for ::1 at 2022-01-14 11:58:14 +0900
