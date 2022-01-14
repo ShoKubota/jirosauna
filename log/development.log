@@ -445,3 +445,271 @@ Started GET "/" for ::1 at 2022-01-14 11:58:14 +0900
 ActionController::RoutingError - uninitialized constant HomeController:
 
 Started POST "/__better_errors/7109ab38ee6e03db/variables" for ::1 at 2022-01-14 11:58:14 +0900
+Started GET "/" for ::1 at 2022-01-14 12:46:19 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 355)
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 31222)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms | Allocations: 34858)
+
+
+
+ActionView::MissingTemplate - Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/shokubota/Desktop/jirosauna/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.4/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.4/app/views":
+  app/views/layouts/application.html.erb:16
+
+Started POST "/__better_errors/b8c892c46df267d8/variables" for ::1 at 2022-01-14 12:46:20 +0900
+Started GET "/" for ::1 at 2022-01-14 12:49:47 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 6169)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 7559)
+
+
+
+ActionView::MissingTemplate - Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/shokubota/Desktop/jirosauna/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.4/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.4/app/views":
+  app/views/layouts/application.html.erb:16
+
+Started POST "/__better_errors/e659f9089022aa72/variables" for ::1 at 2022-01-14 12:49:47 +0900
+Started GET "/" for ::1 at 2022-01-14 12:51:19 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 6141)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms | Allocations: 7537)
+
+
+
+ActionView::MissingTemplate - Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/shokubota/Desktop/jirosauna/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.4/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.4/app/views":
+  app/views/layouts/application.html.erb:16
+
+Started POST "/__better_errors/ebc6d228e8bccc4f/variables" for ::1 at 2022-01-14 12:51:20 +0900
+Started GET "/" for ::1 at 2022-01-14 12:51:39 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3767)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 5247)
+
+
+Started GET "/" for ::1 at 2022-01-14 12:51:44 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3371)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3923)
+
+
+Started GET "/" for ::1 at 2022-01-14 12:52:02 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3234)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3681)
+
+
+Started GET "/" for ::1 at 2022-01-14 12:52:02 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 6147)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 7478)
+
+
+
+ActionView::MissingTemplate - Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/shokubota/Desktop/jirosauna/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.4/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.4/app/views":
+  app/views/layouts/application.html.erb:16
+
+Started POST "/__better_errors/aa9f4608e5746a18/variables" for ::1 at 2022-01-14 12:52:02 +0900
+Started GET "/" for ::1 at 2022-01-14 12:56:15 +0900
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 6144)
+Completed 500 Internal Server Error in 36ms (Allocations: 7523)
+
+
+
+ActionView::MissingTemplate - Missing partial home/shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/shokubota/Desktop/jirosauna/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.4/app/views"
+  * "/Users/shokubota/.rbenv/versions/3.0.3/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.4/app/views":
+  app/views/layouts/application.html.erb:16
+
+Started POST "/__better_errors/0836c596c52f5da4/variables" for ::1 at 2022-01-14 12:56:15 +0900
+Started GET "/" for ::1 at 2022-01-14 13:01:23 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 148)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 15422)
+Completed 200 OK in 37ms (Views: 35.7ms | Allocations: 16888)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:03:46 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4099)
+Completed 200 OK in 24ms (Views: 22.2ms | Allocations: 5478)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:04:25 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3327)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 3819)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:04:26 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4086)
+Completed 200 OK in 10ms (Views: 8.3ms | Allocations: 5413)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:04:39 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4092)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 5461)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:04:40 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3327)
+Completed 200 OK in 17ms (Views: 15.1ms | Allocations: 3819)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:05:27 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4097)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 5425)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:06:20 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 146)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4105)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 5480)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:07:49 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4091)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 5461)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:08:19 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4091)
+Completed 200 OK in 10ms (Views: 9.0ms | Allocations: 5465)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:08:41 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 142)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4450)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 5820)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:08:43 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3426)
+Completed 200 OK in 19ms (Views: 17.0ms | Allocations: 3917)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:09:58 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 145)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 129)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4452)
+Completed 200 OK in 18ms (Views: 17.1ms | Allocations: 5780)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:09:58 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3432)
+Completed 200 OK in 16ms (Views: 14.0ms | Allocations: 3924)
+
+
+Started GET "/" for ::1 at 2022-01-14 13:17:39 +0900
+Processing by StaticPagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 130)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4439)
+Completed 200 OK in 14ms (Views: 12.5ms | Allocations: 5767)
+
+
