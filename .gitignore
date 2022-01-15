@@ -68,4 +68,8 @@ yarn-debug.log*
 !/storage/.keep
 /public/uploads
 
+# Ignore ER
 er.drawio
+
+# Ignore rubocop_todo
+.rubocop_todo.yml
