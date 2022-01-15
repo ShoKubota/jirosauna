@@ -1,0 +1,2 @@
+class Jiro < Shop
+end

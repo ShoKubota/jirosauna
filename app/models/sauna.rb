@@ -1,0 +1,2 @@
+class Sauna < Shop
+end
