@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  has_many :likes, dependent: :destroy
   belongs_to :user
   belongs_to :sauna
   belongs_to :jiro
