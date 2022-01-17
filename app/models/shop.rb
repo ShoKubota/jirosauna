@@ -5,4 +5,5 @@ class Shop < ApplicationRecord
   validates :longitude, presence: true
   validates :latitude, presence: true
   validates :place_id, presence: true
+  validates :address, presence: true
 end
