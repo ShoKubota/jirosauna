@@ -25,6 +25,12 @@ namespace :get_shop_data_from_places_api do
     end
   end
 
+  task get_jiro_data_from_api: :environment do
+    puts "APIの二郎データを取得"
+    # AutoCompleteを使用してplace_idを取得する
+    
+  end
+
   task get_sauna_data: :environment do
     puts "サウナのデータを取得"
   end
