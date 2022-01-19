@@ -17,8 +17,10 @@ namespace :get_shop_data_from_places_api do
         doc = Nokogiri::HTML.parse(html)
         nodes = doc.at_css('#searched').css('.name').css('h4')
         nodes.each do |node|
-          jiro_name = node.text unless node.previous_sibling
-          jiros << Jiro.new(name: jiro_name)
+          unless node.previous_sibling.present?
+            jiro_name = node.text
+            jiros << Jiro.new(name: jiro_name)
+          end
         end
         next_link = doc.at_css('.pages').at_css('.next')
         next_href = next_link.attribute('href')
@@ -26,6 +28,15 @@ namespace :get_shop_data_from_places_api do
         url = "#{base_url}#{next_href}"
       end
     end
+    jiros.each do |jiro|
+      get_places_data(jiro)
+    end
+  end
+
+  task get_jiro_data_from_api: :environment do
+    ji = Jiro.new(name: 'らーめんぶっ豚 八王子店')
+    ji2 = Jiro.new(name: 'おどるめんAKIRA')
+    jiros = [ji, ji2]
     jiros.each do |jiro|
       get_places_data(jiro)
     end
