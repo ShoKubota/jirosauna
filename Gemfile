@@ -41,6 +41,9 @@ gem 'html2slim'
 # Scraping
 gem 'nokogiri'
 
+# Redirection
+gem 'open_uri_redirections'
+
 #Security
 gem 'dotenv-rails'
 

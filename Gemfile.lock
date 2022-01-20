@@ -140,6 +140,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.1-arm64-darwin)
       racc (~> 1.4)
+    open_uri_redirections (0.2.1)
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
@@ -306,6 +307,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.3)
   nokogiri
+  open_uri_redirections
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
