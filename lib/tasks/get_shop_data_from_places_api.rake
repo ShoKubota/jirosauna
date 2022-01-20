@@ -31,26 +31,42 @@ namespace :get_shop_data_from_places_api do
       end
     end
     jiros.each do |jiro|
-      get_places_data(jiro)
+      get_places_data_from_name(jiro)
     end
   end
 
   task get_sauna_data: :environment do
     puts "電話番号からサウナのデータを取得する"
-    base_url = 'https://www.mapion.co.jp/phonebook/M09017/'
+    base_url = 'https://www.mapion.co.jp'
+    option_url = '/phonebook/M09017/'
     cities = ['tokyo', 'kanagawa', 'saitama', 'chiba']
+    saunas = []
     cities.each do |city|
       CSV.foreach("lib/#{city}.csv", headers: true) do |city_code|
-        url = "#{base_url}#{city_code['市区町村CD']}"
-        sleep 2
-        html = URI.open(url, :allow_redirections => :all).read
-        doc = Nokogiri::HTML.parse(html)
-        nodes = doc.at_css('table').css('tbody').css('th + td')
-        nodes.each do |node|
-          sauna_tel_number = node.text.strip!
-          saunas_tel_number << Sauna.new(tel_number: sauna_tel_number)
+        url = "#{base_url}#{option_url}#{city_code['市区町村CD']}"
+        loop do
+          sleep 5
+          html = URI.open(url, :allow_redirections => :all).read
+          doc = Nokogiri::HTML.parse(html)
+          tel_numbers = doc.at_css('table').css('tbody').css('th + td')
+          tel_numbers.each do |tel_number|
+            sauna_name = tel_number.previous_sibling.previous_sibling.text.strip!
+            if tel_number.text.blank?
+              saunas << Sauna.new(name: sauna_name)
+            else
+              sauna_tel_number = tel_number.text.strip!
+              saunas << Sauna.new(name: sauna_name, tel_number: sauna_tel_number)
+            end
+          end
+          #次のページがあれば、すすむ
+          next_link = doc.at_css('.pagination-currnet + a')
+          next_link.present? ? next_href = next_link.attribute('href') : break
+          url = "#{base_url}#{next_href}"
         end
       end
+    end
+    saunas.each do |sauna|
+      get_places_data_from_tel_number(sauna)
     end
   end
 end
