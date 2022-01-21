@@ -10,3 +10,23 @@ section.text-gray-600.body-font.bg-gradient-to-tr.from-sky-400.to-cyan-300
           | マップから探す
         button.ml-4.inline-flex.text-gray-600.font-semibold.bg-yellow-300.border-0.py-4.px-10.mt-8.focus:outline-none.hover:bg-yellow-400.rounded-full.text-lg.shadow-lg
           | 二郎から探す
+section.text-gray-600.body-font.overflow-hidden
+  .container.px-5.py-24.mx-auto
+    .divide-y-2.divide-gray-100
+      .py-8.flex.flex-wrap
+        .px-4.lg:w-1/3
+          h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
+          - @jiros.each do |jiro|
+            .border.border-gray-200.py-4.bg-teal-100
+              p.font-semibold.text-gray-700 =jiro.name
+              p.mt-.text-gray-500.text-sm =jiro.address
+              p.mt-1.text-gray-500.text-sm ="評価：#{jiro.rating}"
+              p.mt-1.text-gray-500.text-sm ="電話番号：#{jiro.tel_number}" 
+        .px-4.lg:w-1/3
+          h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
+          - @saunas.each do |sauna|
+            .py-4.border 
+              p.font-semibold.text-gray-700 =sauna .name
+              p.mt-1.text-gray-500.text-sm =sauna.address
+              p.mt-1.text-gray-500.text-sm ="評価：#{sauna.rating}"
+              p.mt-1.text-gray-500.text-sm ="電話番号：#{sauna.tel_number}" 
