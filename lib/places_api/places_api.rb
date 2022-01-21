@@ -1,6 +1,7 @@
 def get_places_data_from_name(shop)
   # API節約のため、にデータを取得済みの場合は、returnする
   return if aleady_exist?(shop)
+
   # AutoCompleteを使用してplace_idを取得する
   get_place_id_from_name(shop)
   # Detailサーチで詳細情報を取得→保存する
@@ -16,6 +17,7 @@ end
 def get_places_data_from_tel_number(shop)
   # API節約のため、にデータを取得済みの場合は、returnする
   return if aleady_exist?(shop)
+
   # FindPlaceFromText（PhoneNumber）を使用してplace_idを取得する、ない場合は名前で取得
   get_place_id_from_tel_number(shop) if shop.tel_number.present?
   get_place_id_from_name(shop) if shop.place_id.nil?
@@ -41,7 +43,7 @@ def get_place_id_from_name(shop)
   auto_complete_page = URI.open(auto_complete_url).read
   auto_complete_data = JSON.parse(auto_complete_page)
   if auto_complete_data['predictions'].present?
-    shop.place_id =  auto_complete_data['predictions'].first['place_id']
+    shop.place_id = auto_complete_data['predictions'].first['place_id']
   else
     # auto_completeで見つからない場合、text検索で取得する
     query = URI.encode_www_form(
@@ -71,7 +73,7 @@ def get_place_id_from_tel_number(shop)
   phone_research_url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?#{query}"
   phone_research_page = URI.open(phone_research_url).read
   phone_research_data = JSON.parse(phone_research_page)
-  shop.place_id =  phone_research_data['candidates'].first['place_id'] if phone_research_data['candidates'].present?
+  shop.place_id = phone_research_data['candidates'].first['place_id'] if phone_research_data['candidates'].present?
 end
 
 def get_detail_data(shop)

@@ -1,4 +1,4 @@
-require './lib/places_api/places_api.rb'
+require './lib/places_api/places_api'
 require 'open-uri'
 require 'open_uri_redirections'
 require 'nokogiri'
@@ -11,7 +11,7 @@ namespace :get_shop_data_from_places_api do
     base_url = 'https://ramendb.supleks.jp'
     states = ['tokyo', 'kanagawa', 'saitama', 'chiba']
     jiros = []
-    states.each do |state| 
+    states.each do |state|
       url = "#{base_url}/search?page=1&state=#{state}&city=&order=point&station-id=0&tags=3"
       loop do
         sleep 2
@@ -27,6 +27,7 @@ namespace :get_shop_data_from_places_api do
         next_link = doc.at_css('.pages').at_css('.next')
         next_href = next_link.attribute('href')
         break unless next_href
+
         url = "#{base_url}#{next_href}"
       end
     end
@@ -46,7 +47,7 @@ namespace :get_shop_data_from_places_api do
         url = "#{base_url}#{option_url}#{city_code['市区町村CD']}"
         loop do
           sleep 5
-          html = URI.open(url, :allow_redirections => :all).read
+          html = URI.open(url, allow_redirections: :all).read
           doc = Nokogiri::HTML.parse(html)
           tel_numbers = doc.at_css('table').css('tbody').css('th + td')
           tel_numbers.each do |tel_number|
@@ -58,7 +59,7 @@ namespace :get_shop_data_from_places_api do
               saunas << Sauna.new(name: sauna_name, tel_number: sauna_tel_number)
             end
           end
-          #次のページがあれば、すすむ
+          # 次のページがあれば、すすむ
           next_link = doc.at_css('.pagination-currnet + a')
           next_link.present? ? next_href = next_link.attribute('href') : break
           url = "#{base_url}#{next_href}"
