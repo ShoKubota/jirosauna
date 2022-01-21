@@ -4,5 +4,5 @@ class Post < ApplicationRecord
   belongs_to :sauna
   belongs_to :jiro
 
-  validates :content, presence: true, length: { maximum: 22525 }
+  validates :content, presence: true, length: { maximum: 22_525 }
 end

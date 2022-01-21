@@ -1,3 +1,20 @@
 inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.6
+  NewCops: enable    # ← 新しい規約が登録された場合に、適用するかどうかの判定
+  Exclude:
+    - 'bin/**'
+    - 'node_modules/**/*'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'Gemfile'
+    - 'brackets'
+    - 'use_perl_names'
+
 Style/Documentation:
+  Enabled: false
+Security/Open:
   Enabled: false

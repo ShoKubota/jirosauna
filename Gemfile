@@ -38,6 +38,18 @@ gem 'enum_help'
 gem 'slim-rails'
 gem 'html2slim'
 
+# Scraping
+gem 'nokogiri'
+
+# Redirection
+gem 'open_uri_redirections'
+
+#Security
+gem 'dotenv-rails'
+
+# Normalize phone number
+gem 'phony_rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   #Debugger
