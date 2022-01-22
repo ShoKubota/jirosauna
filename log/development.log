@@ -21447,3 +21447,521 @@ Processing by MapsController#search as HTML
 Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 6792)
 
 
+Started GET "/maps" for ::1 at 2022-01-22 16:41:19 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 5.2ms | Allocations: 1322)
+  Rendered shared/_header.html.slim (Duration: 16.3ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 19.2ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 64.7ms | Allocations: 40420)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.0ms | Allocations: 41830)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:43:58 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 6.1ms | Allocations: 2852)
+  Rendered shared/_header.html.slim (Duration: 12.2ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 18.3ms | Allocations: 20277)
+  Rendered layout layouts/application.html.slim (Duration: 51.6ms | Allocations: 41976)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms | Allocations: 43375)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:44:24 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 10.4ms | Allocations: 3041)
+  Rendered shared/_header.html.slim (Duration: 13.6ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 25.0ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 63.1ms | Allocations: 42146)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.0ms | Allocations: 43538)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:46:23 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 11.2ms | Allocations: 3109)
+  Rendered shared/_header.html.slim (Duration: 12.4ms | Allocations: 10939)
+  Rendered shared/_footer.html.slim (Duration: 17.8ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 56.4ms | Allocations: 42214)
+Completed 200 OK in 61ms (Views: 59.0ms | Allocations: 43602)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:47:14 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 6.9ms | Allocations: 3166)
+  Rendered shared/_header.html.slim (Duration: 12.5ms | Allocations: 10952)
+  Rendered shared/_footer.html.slim (Duration: 17.2ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 55.6ms | Allocations: 42291)
+Completed 200 OK in 79ms (Views: 58.1ms | Allocations: 43681)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:48:08 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 8.2ms | Allocations: 3163)
+  Rendered shared/_header.html.slim (Duration: 12.4ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 17.5ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 53.1ms | Allocations: 42273)
+Completed 200 OK in 58ms (Views: 55.6ms | Allocations: 43662)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:48:52 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.6ms | Allocations: 3494)
+Completed 200 OK in 8ms (Views: 7.6ms | Allocations: 3984)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:49:13 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.3ms | Allocations: 3489)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 3934)
+
+
+Started GET "/" for ::1 at 2022-01-22 16:49:59 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (2.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (3.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 128.6ms | Allocations: 57928)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 135.8ms | Allocations: 61354)
+Completed 200 OK in 250ms (Views: 130.9ms | ActiveRecord: 42.0ms | Allocations: 83680)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:50:10 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 11.3ms | Allocations: 3497)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 3993)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:52:02 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.0ms | Allocations: 3486)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:52:03 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 11.1ms | Allocations: 3486)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 3933)
+
+
+Started GET "/" for ::1 at 2022-01-22 16:53:04 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (3.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (3.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 114.0ms | Allocations: 39458)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 120.2ms | Allocations: 42800)
+Completed 200 OK in 143ms (Views: 116.6ms | ActiveRecord: 9.9ms | Allocations: 44281)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:54:49 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 27.0ms | Allocations: 3487)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms | Allocations: 3935)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:55:55 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.2ms | Allocations: 3487)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:58:47 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.9ms | Allocations: 3494)
+Completed 200 OK in 18ms (Views: 8.8ms | Allocations: 3939)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:58:51 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.0ms | Allocations: 3486)
+Completed 200 OK in 12ms (Views: 10.3ms | Allocations: 3930)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:59:03 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.2ms | Allocations: 3486)
+Completed 200 OK in 7ms (Views: 6.6ms | Allocations: 3930)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:59:04 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.7ms | Allocations: 3487)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 3931)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:02:14 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.1ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.9ms | Allocations: 3486)
+Completed 200 OK in 15ms (Views: 9.9ms | Allocations: 3930)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:02:40 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.8ms | Allocations: 3486)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 3930)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:02:41 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.7ms | Allocations: 37)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.1ms | Allocations: 3487)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 3932)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:22:32 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 7.9ms | Allocations: 2853)
+  Rendered shared/_header.html.slim (Duration: 12.8ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 20.4ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 56.4ms | Allocations: 41962)
+Completed 200 OK in 65ms (Views: 62.2ms | Allocations: 43324)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:24:17 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 5.8ms | Allocations: 3062)
+  Rendered shared/_header.html.slim (Duration: 12.8ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 18.1ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 51.6ms | Allocations: 42165)
+Completed 200 OK in 57ms (Views: 55.1ms | Allocations: 43549)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:24:44 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 5.6ms | Allocations: 3059)
+  Rendered shared/_header.html.slim (Duration: 21.9ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 18.6ms | Allocations: 20266)
+  Rendered layout layouts/application.html.slim (Duration: 77.4ms | Allocations: 42164)
+Completed 200 OK in 82ms (Views: 80.7ms | Allocations: 43550)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:24:52 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 5.4ms | Allocations: 3221)
+  Rendered shared/_header.html.slim (Duration: 11.7ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.4ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 46.4ms | Allocations: 42328)
+Completed 200 OK in 50ms (Views: 48.7ms | Allocations: 43717)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:24:56 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 11.1ms | Allocations: 3500)
+Completed 200 OK in 14ms (Views: 12.7ms | Allocations: 3990)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:27:20 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 9.6ms | Allocations: 3147)
+  Rendered shared/_header.html.slim (Duration: 12.5ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 33.9ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 75.6ms | Allocations: 42240)
+Completed 200 OK in 81ms (Views: 79.0ms | Allocations: 43579)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:27:36 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 5.9ms | Allocations: 2969)
+  Rendered shared/_header.html.slim (Duration: 12.8ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 19.7ms | Allocations: 20265)
+  Rendered layout layouts/application.html.slim (Duration: 52.5ms | Allocations: 42077)
+Completed 200 OK in 56ms (Views: 54.9ms | Allocations: 43468)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:27:37 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.2ms | Allocations: 3500)
+Completed 200 OK in 12ms (Views: 10.6ms | Allocations: 3991)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:27:42 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 8.3ms | Allocations: 2967)
+  Rendered shared/_header.html.slim (Duration: 13.1ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.3ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 52.3ms | Allocations: 42071)
+Completed 200 OK in 56ms (Views: 54.5ms | Allocations: 43413)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:27:42 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.5ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.4ms | Allocations: 3500)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 3992)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:30:04 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 13.7ms | Allocations: 3499)
+Completed 200 OK in 15ms (Views: 14.4ms | Allocations: 3944)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:30:14 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 11.2ms | Allocations: 3489)
+Completed 200 OK in 14ms (Views: 12.5ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:30:16 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 17.8ms | Allocations: 3489)
+Completed 200 OK in 21ms (Views: 19.1ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:36:52 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.0ms | Allocations: 3490)
+Completed 200 OK in 13ms (Views: 9.8ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:36:53 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 11.1ms | Allocations: 3499)
+Completed 200 OK in 15ms (Views: 13.0ms | Allocations: 3943)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:38:33 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 13.8ms | Allocations: 3489)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:58:30 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 8.2ms | Allocations: 3749)
+  Rendered shared/_header.html.slim (Duration: 14.0ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 20.1ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 59.0ms | Allocations: 42857)
+Completed 200 OK in 69ms (Views: 65.9ms | Allocations: 44199)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:58:32 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.2ms | Allocations: 3500)
+Completed 200 OK in 8ms (Views: 6.9ms | Allocations: 3992)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 17:59:06 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 7.5ms | Allocations: 3705)
+  Rendered shared/_header.html.slim (Duration: 12.8ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 36.6ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 71.1ms | Allocations: 42809)
+Completed 200 OK in 76ms (Views: 73.8ms | Allocations: 44148)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:00:29 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 6.6ms | Allocations: 3708)
+  Rendered shared/_header.html.slim (Duration: 16.6ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 19.3ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 62.7ms | Allocations: 42815)
+Completed 200 OK in 70ms (Views: 67.2ms | Allocations: 44204)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:00:36 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 6.1ms | Allocations: 3705)
+  Rendered shared/_header.html.slim (Duration: 12.4ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 18.0ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 49.5ms | Allocations: 42809)
+Completed 200 OK in 53ms (Views: 51.4ms | Allocations: 44193)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:00:44 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 15.1ms | Allocations: 3706)
+  Rendered shared/_header.html.slim (Duration: 11.8ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 17.0ms | Allocations: 20266)
+  Rendered layout layouts/application.html.slim (Duration: 56.8ms | Allocations: 42821)
+Completed 200 OK in 60ms (Views: 59.0ms | Allocations: 44205)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:00:50 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 5.3ms | Allocations: 3707)
+  Rendered shared/_header.html.slim (Duration: 11.6ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 16.9ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 45.8ms | Allocations: 42812)
+Completed 200 OK in 49ms (Views: 48.0ms | Allocations: 44203)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:01:27 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.6ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 13.5ms | Allocations: 3500)
+Completed 200 OK in 25ms (Views: 20.3ms | Allocations: 3991)
+
+

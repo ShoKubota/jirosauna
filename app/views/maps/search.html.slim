@@ -1,2 +1,10 @@
-h1 Maps#search
-p Find me in app/views/maps/search.html.slim
+#map.h-96.w-full
+javascript:
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 35.64806, lng: 139.741633 },
+            scrollwheel: false,
+            zoom: 14
+        });
+    } // close function here
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap" 
