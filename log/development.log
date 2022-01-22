@@ -21368,3 +21368,82 @@ Processing by StaticPagesController#top as HTML
 Completed 200 OK in 107ms (Views: 95.2ms | ActiveRecord: 8.0ms | Allocations: 44187)
 
 
+Started GET "/" for ::1 at 2022-01-22 16:37:14 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (41.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 158.8ms | Allocations: 57904)
+  Rendered shared/_header.html.slim (Duration: 17.4ms | Allocations: 10947)
+  Rendered shared/_footer.html.slim (Duration: 18.6ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 256.8ms | Allocations: 112251)
+Completed 200 OK in 314ms (Views: 214.1ms | ActiveRecord: 59.1ms | Allocations: 130381)
+
+
+Started GET "/" for ::1 at 2022-01-22 16:37:25 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (4.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 92.7ms | Allocations: 39460)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 99.6ms | Allocations: 42806)
+Completed 200 OK in 113ms (Views: 93.1ms | ActiveRecord: 9.1ms | Allocations: 44333)
+
+
+Started GET "/" for ::1 at 2022-01-22 16:39:13 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (3.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 113.9ms | Allocations: 57904)
+  Rendered shared/_header.html.slim (Duration: 11.3ms | Allocations: 10947)
+  Rendered shared/_footer.html.slim (Duration: 17.6ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 158.7ms | Allocations: 99536)
+Completed 200 OK in 207ms (Views: 153.8ms | ActiveRecord: 14.1ms | Allocations: 117385)
+
+
+Started GET "/" for ::1 at 2022-01-22 16:39:41 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (2.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 126.4ms | Allocations: 57919)
+  Rendered shared/_header.html.slim (Duration: 12.5ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 17.9ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 187.3ms | Allocations: 111432)
+Completed 200 OK in 237ms (Views: 182.7ms | ActiveRecord: 13.9ms | Allocations: 129211)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 16:40:25 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 4.8ms | Allocations: 1862)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 11.2ms | Allocations: 5560)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 6792)
+
+
