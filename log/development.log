@@ -21965,3 +21965,1742 @@ Processing by MapsController#search as HTML
 Completed 200 OK in 25ms (Views: 20.3ms | Allocations: 3991)
 
 
+Started GET "/maps" for ::1 at 2022-01-22 18:02:37 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 6.6ms | Allocations: 3704)
+  Rendered shared/_header.html.slim (Duration: 13.0ms | Allocations: 10952)
+  Rendered shared/_footer.html.slim (Duration: 17.7ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 63.1ms | Allocations: 42818)
+Completed 200 OK in 68ms (Views: 66.5ms | Allocations: 44157)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:04:19 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 53.4ms | Allocations: 9167)
+  Rendered layout layouts/application.html.slim (Duration: 53.7ms | Allocations: 9245)
+Completed 500 Internal Server Error in 59ms (Allocations: 10606)
+
+
+
+NameError - undefined local variable or method `simple_form_for' for #<ActionView::Base:0x00000000010c20>
+Did you mean?  simple_format:
+  app/views/maps/search.html.slim:11
+
+Started POST "/__better_errors/03a16e2ef842374f/variables" for ::1 at 2022-01-22 18:04:19 +0900
+Started GET "/maps" for ::1 at 2022-01-22 18:24:25 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 11.8ms | Allocations: 6727)
+  Rendered layout layouts/application.html.slim (Duration: 12.0ms | Allocations: 6806)
+Completed 500 Internal Server Error in 25ms (Allocations: 8210)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+javascript:
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 35.64806, lng: 139.741633 },
+            scrollwheel: false,
+            zoom: 14
+        });
+    } // close function here
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap"
+= form_with scope: :q, url: maps_result_path, method: :get, do |f|
+  = f.text_field :search_point, placeholder: 'マップから選択してください'
+  = f.text_field :search_point_lat_lng, placeholder: '緯度経度用（本来は消す）'
+  = f.number_field :search_radius, placeholder: '検索範囲を入力してください'
+  = f.submit '検索':
+
+Started POST "/__better_errors/b390af0d26ba7c60/variables" for ::1 at 2022-01-22 18:24:25 +0900
+Started GET "/maps" for ::1 at 2022-01-22 18:26:46 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 7.0ms | Allocations: 3717)
+  Rendered shared/_header.html.slim (Duration: 12.2ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 19.3ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 55.8ms | Allocations: 42825)
+Completed 200 OK in 61ms (Views: 59.2ms | Allocations: 44268)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 18:26:51 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 8.3ms | Allocations: 6698)
+  Rendered layout layouts/application.html.slim (Duration: 8.5ms | Allocations: 6777)
+Completed 500 Internal Server Error in 12ms (Allocations: 8122)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+javascript:
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 35.64806, lng: 139.741633 },
+            scrollwheel: false,
+            zoom: 14
+        });
+    } // close function here
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap"
+= form_with scope: :q, url: maps_result_path, method: :get, do |f|
+  = f.text_field :search_point, placeholder: 'マップから選択してください'
+  = f.text_field :search_point_lat_lng, placeholder: '緯度経度用（本来は消す）'
+  = f.number_field :search_radius, placeholder: '検索範囲を入力してください'
+  = f.submit '検索':
+
+Started POST "/__better_errors/1c6872bb01499a72/variables" for ::1 at 2022-01-22 18:26:51 +0900
+Started GET "/maps" for ::1 at 2022-01-22 18:27:05 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 13.8ms | Allocations: 6702)
+  Rendered layout layouts/application.html.slim (Duration: 14.1ms | Allocations: 6781)
+Completed 500 Internal Server Error in 27ms (Allocations: 8180)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+javascript:
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 35.64806, lng: 139.741633 },
+            scrollwheel: false,
+            zoom: 14
+        });
+    } // close function here
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap"
+  = form_with scope: :q, url: maps_result_path, method: :get, do |f|
+    = f.text_field :search_point, placeholder: 'マップから選択してください'
+    = f.text_field :search_point_lat_lng, placeholder: '緯度経度用（本来は消す）'
+    = f.number_field :search_radius, placeholder: '検索範囲を入力してください'
+    = f.submit '検索':
+
+Started POST "/__better_errors/49ac5dff43d38c5e/variables" for ::1 at 2022-01-22 18:27:05 +0900
+Started GET "/maps" for ::1 at 2022-01-22 18:29:33 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 10.1ms | Allocations: 6710)
+  Rendered layout layouts/application.html.slim (Duration: 10.3ms | Allocations: 6789)
+Completed 500 Internal Server Error in 16ms (Allocations: 8188)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+= form_with scope: :q, url: maps_result_path, method: :get, do |f|
+  = f.text_field :search_point, placeholder: 'マップから選択してください'
+  = f.text_field :search_point_lat_lng, placeholder: '緯度経度用（本来は消す）'
+  = f.number_field :search_radius, placeholder: '検索範囲を入力してください'
+  = f.submit '検索'
+javascript:
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 35.64806, lng: 139.741633 },
+            scrollwheel: false,
+            zoom: 14
+        });
+    } // close function here
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap":
+
+Started POST "/__better_errors/8896f90e30492529/variables" for ::1 at 2022-01-22 18:29:33 +0900
+Started GET "/" for ::1 at 2022-01-22 18:51:22 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (2.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (6.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 128.4ms | Allocations: 52689)
+  Rendered shared/_header.html.slim (Duration: 49.0ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 18.7ms | Allocations: 20266)
+  Rendered layout layouts/application.html.slim (Duration: 212.7ms | Allocations: 91578)
+Completed 200 OK in 359ms (Views: 210.3ms | ActiveRecord: 50.6ms | Allocations: 98651)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 21:52:51 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 660.4ms | Allocations: 3854)
+  Rendered shared/_header.html.slim (Duration: 99.6ms | Allocations: 10939)
+  Rendered shared/_footer.html.slim (Duration: 1110.0ms | Allocations: 20270)
+  Rendered layout layouts/application.html.slim (Duration: 2162.8ms | Allocations: 42969)
+Completed 200 OK in 2619ms (Views: 2406.0ms | Allocations: 44363)
+
+
+Started GET "/" for ::1 at 2022-01-22 21:54:08 +0900
+Processing by StaticPagesController#top as HTML
+Started GET "/" for ::1 at 2022-01-22 21:54:11 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (293.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  [1m[36mJiro Load (306.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (372.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mJiro Load (370.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (197.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  [1m[36mSauna Load (52.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 1534.0ms | Allocations: 71449)
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 2107.3ms | Allocations: 92453)
+  Rendered shared/_header.html.slim (Duration: 9.1ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.6ms | Allocations: 39)
+  Rendered shared/_header.html.slim (Duration: 2.4ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 2503.5ms | Allocations: 98943)
+  Rendered shared/_footer.html.slim (Duration: 0.3ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 2552.2ms | Allocations: 99145)
+Completed 200 OK in 10624ms (Views: 2160.8ms | ActiveRecord: 5351.7ms | Allocations: 111311)
+
+
+Completed 200 OK in 13820ms (Views: 2089.9ms | ActiveRecord: 5439.7ms | Allocations: 115289)
+
+
+Started GET "/" for ::1 at 2022-01-22 21:55:45 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1176.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+Started GET "/maps" for ::1 at 2022-01-22 21:55:49 +0900
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 83.0ms | Allocations: 4205)
+  Rendered shared/_header.html.slim (Duration: 105.4ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 192.8ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 570.2ms | Allocations: 43906)
+Completed 200 OK in 902ms (Views: 599.1ms | ActiveRecord: 0.0ms | Allocations: 58209)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 21:55:50 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 9.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.4ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 119.6ms | Allocations: 3499)
+Completed 200 OK in 324ms (Views: 308.3ms | ActiveRecord: 0.0ms | Allocations: 4006)
+
+
+  [1m[36mJiro Load (866.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (743.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 3157.9ms | Allocations: 106709)
+  Rendered shared/_header.html.slim (Duration: 0.4ms | Allocations: 41)
+  Rendered shared/_footer.html.slim (Duration: 0.3ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 3430.3ms | Allocations: 112019)
+Completed 200 OK in 7511ms (Views: 1985.0ms | ActiveRecord: 2786.1ms | Allocations: 117865)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:03:35 +0900
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 16.0ms | Allocations: 12478)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: f5e7dfd4cd625848ed65
+Version: webpack 4.46.0
+Time: 2594ms
+Built at: 2022/01/22 22:03:40
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6004a3f036c2a03cc7a7.js    155 KiB  application  [emitted] [immutable]  application
+js/application-6004a3f036c2a03cc7a7.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-6004a3f036c2a03cc7a7.js js/application-6004a3f036c2a03cc7a7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 530 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 13.1ms | Allocations: 10956)
+  Rendered shared/_footer.html.slim (Duration: 30.3ms | Allocations: 20265)
+  Rendered layout layouts/application.html.slim (Duration: 5263.2ms | Allocations: 60829)
+Completed 200 OK in 5272ms (Views: 5266.2ms | ActiveRecord: 0.0ms | Allocations: 64587)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:07:01 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 13.6ms | Allocations: 4488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.7ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 104.6ms | Allocations: 20265)
+  Rendered layout layouts/application.html.slim (Duration: 157.5ms | Allocations: 45355)
+Completed 200 OK in 168ms (Views: 163.6ms | ActiveRecord: 0.0ms | Allocations: 46818)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:07:16 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 13.2ms | Allocations: 2328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 14.7ms | Allocations: 10938)
+  Rendered shared/_footer.html.slim (Duration: 17.8ms | Allocations: 20266)
+  Rendered layout layouts/application.html.slim (Duration: 74.0ms | Allocations: 43199)
+Completed 200 OK in 84ms (Views: 79.3ms | ActiveRecord: 0.0ms | Allocations: 44608)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:07:24 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 24.9ms | Allocations: 4478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 14.3ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.3ms | Allocations: 20266)
+  Rendered layout layouts/application.html.slim (Duration: 82.9ms | Allocations: 45348)
+Completed 200 OK in 93ms (Views: 88.7ms | ActiveRecord: 0.0ms | Allocations: 46747)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:07:55 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 16.4ms | Allocations: 4480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 19.9ms | Allocations: 10944)
+  Rendered shared/_footer.html.slim (Duration: 17.2ms | Allocations: 20265)
+  Rendered layout layouts/application.html.slim (Duration: 81.8ms | Allocations: 45352)
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 0.0ms | Allocations: 46749)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:08:06 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 15.1ms | Allocations: 4481)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 14.5ms | Allocations: 10940)
+  Rendered shared/_footer.html.slim (Duration: 22.6ms | Allocations: 20270)
+  Rendered layout layouts/application.html.slim (Duration: 79.8ms | Allocations: 45355)
+Completed 200 OK in 92ms (Views: 87.7ms | ActiveRecord: 0.0ms | Allocations: 46754)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:08:19 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 16.5ms | Allocations: 4479)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 15.2ms | Allocations: 10941)
+  Rendered shared/_footer.html.slim (Duration: 97.8ms | Allocations: 20269)
+  Rendered layout layouts/application.html.slim (Duration: 157.9ms | Allocations: 45353)
+Completed 200 OK in 170ms (Views: 164.6ms | ActiveRecord: 0.0ms | Allocations: 46762)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:12:46 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 40.2ms | Allocations: 8855)
+  Rendered layout layouts/application.html.slim (Duration: 40.6ms | Allocations: 8942)
+Completed 500 Internal Server Error in 51ms (Allocations: 10303)
+
+
+
+Slim::Parser::SyntaxError - Unknown line indicator
+  /Users/shokubota/Desktop/jirosauna/app/views/maps/search.html.slim, Line 71, Column 0
+    } // close function here
+    ^:
+
+Started POST "/__better_errors/06c22df134516608/variables" for ::1 at 2022-01-22 22:12:47 +0900
+Started GET "/maps" for ::1 at 2022-01-22 22:14:49 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 15.2ms | Allocations: 4736)
+  Rendered layout layouts/application.html.slim (Duration: 15.7ms | Allocations: 4814)
+Completed 500 Internal Server Error in 27ms (Allocations: 6213)
+
+
+
+Slim::Parser::SyntaxError - Unknown line indicator
+  /Users/shokubota/Desktop/jirosauna/app/views/maps/search.html.slim, Line 71, Column 0
+    } // close function here
+    ^:
+
+Started POST "/__better_errors/0d211dbcbef27082/variables" for ::1 at 2022-01-22 22:14:49 +0900
+Started GET "/maps" for ::1 at 2022-01-22 22:15:20 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 18.9ms | Allocations: 8377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.7ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 15.9ms | Allocations: 20265)
+  Rendered layout layouts/application.html.slim (Duration: 69.9ms | Allocations: 49240)
+Completed 200 OK in 72ms (Views: 70.8ms | Allocations: 49784)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:32:20 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 21.5ms | Allocations: 9820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 13.7ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 15.0ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 74.8ms | Allocations: 50667)
+Completed 200 OK in 87ms (Views: 83.1ms | Allocations: 52011)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:32:30 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 22.4ms | Allocations: 5229)
+Completed 200 OK in 26ms (Views: 24.3ms | Allocations: 5726)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:32:51 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 25.8ms | Allocations: 9811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 13.3ms | Allocations: 10941)
+  Rendered shared/_footer.html.slim (Duration: 16.6ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 89.6ms | Allocations: 50682)
+Completed 200 OK in 101ms (Views: 97.5ms | Allocations: 52021)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:33:00 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 26.4ms | Allocations: 9820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 13.5ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.5ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 82.4ms | Allocations: 50684)
+Completed 200 OK in 93ms (Views: 88.3ms | Allocations: 52076)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:35:26 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 22.2ms | Allocations: 8927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.9ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.3ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 79.0ms | Allocations: 49774)
+Completed 200 OK in 92ms (Views: 85.2ms | Allocations: 51163)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:36:09 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 35.4ms | Allocations: 9057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.8ms | Allocations: 10940)
+  Rendered shared/_footer.html.slim (Duration: 16.4ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 87.1ms | Allocations: 49932)
+Completed 200 OK in 96ms (Views: 92.7ms | Allocations: 51318)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:38:16 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 14.9ms | Allocations: 5350)
+  Rendered layout layouts/application.html.slim (Duration: 15.4ms | Allocations: 5428)
+Completed 500 Internal Server Error in 28ms (Allocations: 6772)
+
+
+
+Slim::Parser::SyntaxError - Unknown line indicator
+  /Users/shokubota/Desktop/jirosauna/app/views/maps/search.html.slim, Line 102, Column 0
+    }
+    ^:
+
+Started POST "/__better_errors/f15a0abf480d922b/variables" for ::1 at 2022-01-22 22:38:16 +0900
+Started GET "/maps" for ::1 at 2022-01-22 22:38:25 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 25.2ms | Allocations: 9065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 13.6ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.4ms | Allocations: 20264)
+  Rendered layout layouts/application.html.slim (Duration: 83.1ms | Allocations: 49929)
+Completed 200 OK in 94ms (Views: 89.4ms | Allocations: 51367)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:38:54 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 27.4ms | Allocations: 11162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 20.0ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 16.8ms | Allocations: 20268)
+  Rendered layout layouts/application.html.slim (Duration: 87.9ms | Allocations: 52017)
+Completed 200 OK in 99ms (Views: 94.5ms | Allocations: 53408)
+
+
+Started GET "/" for ::1 at 2022-01-22 22:39:22 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (12.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (8.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 113.3ms | Allocations: 57965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 124.1ms | Allocations: 63146)
+Completed 200 OK in 306ms (Views: 115.1ms | ActiveRecord: 73.6ms | Allocations: 87254)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:40:17 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 27.7ms | Allocations: 11295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.7ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 25.3ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 88.8ms | Allocations: 52146)
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.0ms | Allocations: 53563)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:40:35 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 27.2ms | Allocations: 11361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.9ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.2ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 90.1ms | Allocations: 52223)
+Completed 200 OK in 100ms (Views: 95.8ms | ActiveRecord: 0.0ms | Allocations: 53622)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:41:56 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 27.7ms | Allocations: 10617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 13.2ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 16.5ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 80.4ms | Allocations: 51468)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.0ms | Allocations: 52860)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:42:17 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 25.8ms | Allocations: 9950)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 12.5ms | Allocations: 10943)
+  Rendered shared/_footer.html.slim (Duration: 16.4ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 86.4ms | Allocations: 51019)
+Completed 200 OK in 99ms (Views: 94.0ms | ActiveRecord: 0.0ms | Allocations: 52418)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:54:17 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 14.9ms | Allocations: 3740)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: b654f81c405b8eda65c7
+Version: webpack 4.46.0
+Time: 2224ms
+Built at: 2022/01/22 22:54:21
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-a23224d0573a70107044.js    155 KiB  application  [emitted] [immutable]  application
+js/application-a23224d0573a70107044.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-a23224d0573a70107044.js js/application-a23224d0573a70107044.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 530 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 10.8ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 17.7ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 4468.5ms | Allocations: 46640)
+Completed 200 OK in 4481ms (Views: 4475.2ms | Allocations: 48029)
+
+
+Started GET "/maps" for ::1 at 2022-01-22 22:55:27 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.2ms | Allocations: 40)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 229dd7fc8a7439d8f659
+Version: webpack 4.46.0
+Time: 2214ms
+Built at: 2022/01/22 22:55:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-916e1f8be2628e17ef9d.js    155 KiB  application  [emitted] [immutable]  application
+js/application-916e1f8be2628e17ef9d.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-916e1f8be2628e17ef9d.js js/application-916e1f8be2628e17ef9d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 530 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 4525.9ms | Allocations: 7237)
+Completed 200 OK in 4537ms (Views: 4533.9ms | Allocations: 7729)
+
+
+Started GET "/" for ::1 at 2022-01-23 12:55:23 +0900
+
+ActiveRecord::ConnectionNotEstablished - connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?:
+
+Started POST "/__better_errors/cdb05c15e4f5760c/variables" for ::1 at 2022-01-23 12:55:23 +0900
+Started GET "/" for ::1 at 2022-01-23 12:55:38 +0900
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (7.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (9.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 147.4ms | Allocations: 69264)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 9141b323d12147c2f0a7
+Version: webpack 4.46.0
+Time: 2368ms
+Built at: 2022/01/23 12:55:43
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-99c502c762df24bdcf52.js    158 KiB  application  [emitted] [immutable]  application
+js/application-99c502c762df24bdcf52.js.map    166 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-99c502c762df24bdcf52.js js/application-99c502c762df24bdcf52.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/google_maps.js] 2.6 KiB {application} [built]
+[./app/javascript/packs/application.js] 559 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 11.9ms | Allocations: 10943)
+  Rendered shared/_footer.html.slim (Duration: 18.0ms | Allocations: 20264)
+  Rendered layout layouts/application.html.slim (Duration: 4797.8ms | Allocations: 112624)
+Completed 200 OK in 4859ms (Views: 4788.6ms | ActiveRecord: 28.9ms | Allocations: 134781)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 12:55:47 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 7.4ms | Allocations: 3742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 18.4ms | Allocations: 9201)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 10467)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 12:55:48 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 20.9ms | Allocations: 5241)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 5740)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 13:00:39 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 23.5ms | Allocations: 5246)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 5692)
+
+
+Started GET "/" for ::1 at 2022-01-23 13:17:34 +0900
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (2.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (2.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 116.9ms | Allocations: 69276)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2022-01-23 13:17:37 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (2.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 88.8ms | Allocations: 39471)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 76a5b31b5206fa6f9020
+Version: webpack 4.46.0
+Time: 2475ms
+Built at: 2022/01/23 13:17:38
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-12669d90d70fe7db53f2.js    158 KiB  application  [emitted] [immutable]  application
+js/application-12669d90d70fe7db53f2.js.map    166 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-12669d90d70fe7db53f2.js js/application-12669d90d70fe7db53f2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/google_maps.js] 2.63 KiB {application} [built]
+[./app/javascript/packs/application.js] 559 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 12.0ms | Allocations: 10958)
+  Rendered shared/_footer.html.slim (Duration: 16.9ms | Allocations: 20276)
+  Rendered layout layouts/application.html.slim (Duration: 4760.9ms | Allocations: 166272)
+Completed 200 OK in 4813ms (Views: 4758.5ms | ActiveRecord: 13.5ms | Allocations: 188546)
+
+
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: e3a7ead1704513ee9c11
+Version: webpack 4.46.0
+Time: 1742ms
+Built at: 2022/01/23 13:17:41
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-eca1a776b53303ce13f7.js    158 KiB  application  [emitted] [immutable]  application
+js/application-eca1a776b53303ce13f7.js.map    166 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-eca1a776b53303ce13f7.js js/application-eca1a776b53303ce13f7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/google_maps.js] 2.63 KiB {application} [built]
+[./app/javascript/packs/application.js] 559 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 54)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 3750.5ms | Allocations: 82603)
+Completed 200 OK in 3802ms (Views: 3745.2ms | ActiveRecord: 19.3ms | Allocations: 88611)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 13:17:44 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 7.5ms | Allocations: 3741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 18.2ms | Allocations: 9205)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 10432)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 13:17:46 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 50.4ms | Allocations: 5248)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 5743)
+
+
+Started GET "/" for ::1 at 2022-01-23 13:22:54 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (1.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (4.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 100.7ms | Allocations: 39476)
+[Webpacker] Compiling...
+Started GET "/maps" for ::1 at 2022-01-23 13:22:57 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 7e381f28690c130b42b1
+Version: webpack 4.46.0
+Time: 2389ms
+Built at: 2022/01/23 13:22:58
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c3f39a369cdda25e4414.js    155 KiB  application  [emitted] [immutable]  application
+js/application-c3f39a369cdda25e4414.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c3f39a369cdda25e4414.js js/application-c3f39a369cdda25e4414.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 530 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 4839.5ms | Allocations: 55312)
+Completed 200 OK in 4848ms (Views: 4833.3ms | ActiveRecord: 8.5ms | Allocations: 56930)
+
+
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 3f6766db2e39f758a2e2
+Version: webpack 4.46.0
+Time: 1839ms
+Built at: 2022/01/23 13:23:01
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b07ab22fcd162cb5ad3f.js    155 KiB  application  [emitted] [immutable]  application
+js/application-b07ab22fcd162cb5ad3f.js.map    163 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b07ab22fcd162cb5ad3f.js js/application-b07ab22fcd162cb5ad3f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 530 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 3852.3ms | Allocations: 11960)
+Completed 200 OK in 3854ms (Views: 3853.4ms | ActiveRecord: 0.0ms | Allocations: 12414)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 13:23:06 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 1713e80e0a598126fb66
+Version: webpack 4.46.0
+Time: 1873ms
+Built at: 2022/01/23 13:23:10
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-a188658ed055a2f31d2e.js    158 KiB  application  [emitted] [immutable]  application
+js/application-a188658ed055a2f31d2e.js.map    166 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-a188658ed055a2f31d2e.js js/application-a188658ed055a2f31d2e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/google_maps.js] 2.63 KiB {application} [built]
+[./app/javascript/packs/application.js] 559 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 3914.2ms | Allocations: 7237)
+Completed 200 OK in 3916ms (Views: 3914.9ms | ActiveRecord: 0.0ms | Allocations: 7684)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 14:49:30 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 16.3ms | Allocations: 4331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 13.7ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 18.0ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 74.8ms | Allocations: 45197)
+Completed 200 OK in 88ms (Views: 83.7ms | Allocations: 46564)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 14:49:37 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 17.5ms | Allocations: 5250)
+Completed 200 OK in 20ms (Views: 18.6ms | Allocations: 5740)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 14:49:50 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 15.6ms | Allocations: 5259)
+Completed 200 OK in 17ms (Views: 16.4ms | Allocations: 5709)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 15:03:09 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 30.4ms | Allocations: 3851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 11.7ms | Allocations: 10940)
+  Rendered shared/_footer.html.slim (Duration: 17.4ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 130.3ms | Allocations: 44728)
+Completed 200 OK in 141ms (Views: 139.8ms | Allocations: 46070)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 15:03:20 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 16.0ms | Allocations: 3819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 15.8ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 21.0ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 83.6ms | Allocations: 44692)
+Completed 200 OK in 95ms (Views: 90.8ms | Allocations: 46083)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 15:03:54 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 14.1ms | Allocations: 3737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 21.0ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 17.1ms | Allocations: 20267)
+  Rendered layout layouts/application.html.slim (Duration: 80.5ms | Allocations: 44614)
+Completed 200 OK in 90ms (Views: 85.4ms | Allocations: 46000)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 15:43:57 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.7ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 24.2ms | Allocations: 5250)
+Completed 200 OK in 29ms (Views: 25.4ms | Allocations: 5742)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 16:24:40 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.9ms | Allocations: 40)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: 55a79326c471ab2c6e36
+Version: webpack 4.46.0
+Time: 2493ms
+Built at: 2022/01/23 16:24:44
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3fe4de53b3a93d73d110.js    158 KiB  application  [emitted] [immutable]  application
+js/application-3fe4de53b3a93d73d110.js.map    166 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3fe4de53b3a93d73d110.js js/application-3fe4de53b3a93d73d110.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/google_maps.js] 2.63 KiB {application} [built]
+[./app/javascript/packs/application.js] 559 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 4849.5ms | Allocations: 7273)
+Completed 200 OK in 4854ms (Views: 4850.7ms | Allocations: 7717)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:30:54 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.9ms | Allocations: 40)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/shokubota/Desktop/jirosauna/public/packs
+[Webpacker] 
+warn - You have enabled the JIT engine which is currently in preview.
+warn - Preview features are not covered by semver, may introduce breaking changes, and can change at any time.
+
+[Webpacker] Hash: abca6a0f8e5a973bb543
+Version: webpack 4.46.0
+Time: 2580ms
+Built at: 2022/01/23 17:30:59
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-23eb91e93e691fdd039a.js    159 KiB  application  [emitted] [immutable]  application
+js/application-23eb91e93e691fdd039a.js.map    166 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-23eb91e93e691fdd039a.js js/application-23eb91e93e691fdd039a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/google_maps.js] 2.81 KiB {application} [built]
+[./app/javascript/packs/application.js] 559 bytes {application} [built]
+[./app/javascript/stylesheets/application.css] 413 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/dist/cjs.js?!./app/javascript/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/dist/cjs.js??ref--5-2!./app/javascript/stylesheets/application.css 33.4 KiB {application} [built]
+    + 6 hidden modules
+
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 4973.0ms | Allocations: 7235)
+Completed 200 OK in 4979ms (Views: 4976.0ms | Allocations: 7680)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:31:25 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 17.1ms | Allocations: 3502)
+Completed 200 OK in 21ms (Views: 18.8ms | Allocations: 3946)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:31:27 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 11.0ms | Allocations: 3500)
+Completed 200 OK in 16ms (Views: 12.1ms | Allocations: 3945)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:31:37 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 4.8ms | Allocations: 3489)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:31:38 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.6ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 15.9ms | Allocations: 3489)
+Completed 200 OK in 20ms (Views: 17.9ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:31:44 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 5.4ms | Allocations: 3500)
+Completed 200 OK in 6ms (Views: 5.9ms | Allocations: 3945)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:37:55 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.9ms | Allocations: 3489)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:40:14 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.7ms | Allocations: 3500)
+Completed 200 OK in 11ms (Views: 10.5ms | Allocations: 3944)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:41:11 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 5.5ms | Allocations: 3489)
+Completed 200 OK in 7ms (Views: 6.5ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:45:12 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.7ms | Allocations: 3489)
+Completed 200 OK in 9ms (Views: 7.2ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 17:50:40 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.4ms | Allocations: 3495)
+Completed 200 OK in 8ms (Views: 7.0ms | Allocations: 3939)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:00:42 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 6.7ms | Allocations: 3500)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 3945)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:01:39 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 8.1ms | Allocations: 4568)
+  Rendered shared/_header.html.slim (Duration: 12.8ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 18.8ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 52.9ms | Allocations: 43666)
+Completed 200 OK in 60ms (Views: 58.1ms | Allocations: 45008)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:02:29 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 13.7ms | Allocations: 5116)
+  Rendered shared/_header.html.slim (Duration: 18.2ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 26.7ms | Allocations: 20264)
+  Rendered layout layouts/application.html.slim (Duration: 72.7ms | Allocations: 44221)
+Completed 200 OK in 77ms (Views: 75.7ms | Allocations: 45607)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:03:55 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.9ms | Allocations: 3500)
+Completed 200 OK in 11ms (Views: 9.6ms | Allocations: 3992)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:09:52 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.6ms | Allocations: 3489)
+Completed 200 OK in 10ms (Views: 8.5ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:10:00 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 5.6ms | Allocations: 3489)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:11:36 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 9.3ms | Allocations: 3489)
+Completed 200 OK in 12ms (Views: 10.3ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:13:50 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.5ms | Allocations: 3489)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:22:01 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.5ms | Allocations: 3500)
+Completed 200 OK in 11ms (Views: 9.1ms | Allocations: 3944)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:24:26 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.3ms | Allocations: 3489)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 3934)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:30:48 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.6ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.2ms | Allocations: 3500)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 3945)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:39:58 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 8.5ms | Allocations: 5527)
+  Rendered shared/_header.html.slim (Duration: 11.7ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 17.3ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 50.9ms | Allocations: 44626)
+Completed 200 OK in 59ms (Views: 56.7ms | Allocations: 45969)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:49:37 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.0ms | Allocations: 3489)
+Completed 200 OK in 9ms (Views: 7.7ms | Allocations: 3979)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:51:21 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 22.0ms | Allocations: 3500)
+Completed 200 OK in 27ms (Views: 24.6ms | Allocations: 3943)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 18:51:46 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 5.3ms | Allocations: 3489)
+Completed 200 OK in 6ms (Views: 5.8ms | Allocations: 3934)
+
+
+Started GET "/" for ::1 at 2022-01-23 21:37:09 +0900
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (2.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (2.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (2.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 115.7ms | Allocations: 69276)
+  Rendered shared/_header.html.slim (Duration: 31.9ms | Allocations: 10944)
+  Rendered shared/_footer.html.slim (Duration: 17.6ms | Allocations: 20268)
+  Rendered layout layouts/application.html.slim (Duration: 177.4ms | Allocations: 108665)
+Completed 200 OK in 236ms (Views: 174.7ms | ActiveRecord: 15.1ms | Allocations: 130952)
+
+
+Started GET "/" for ::1 at 2022-01-23 21:37:11 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mJiro Load (2.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 ORDER BY "shops"."id" ASC LIMIT $2[0m  [["type", "Jiro"], ["LIMIT", 1]]
+  ↳ app/controllers/static_pages_controller.rb:3:in `top'
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  [1m[36mJiro Load (2.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Jiro"]]
+  ↳ app/views/static_pages/top.html.slim:19
+  [1m[36mSauna Load (3.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1[0m  [["type", "Sauna"]]
+  ↳ app/views/static_pages/top.html.slim:27
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 86.2ms | Allocations: 39568)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 91.2ms | Allocations: 42961)
+Completed 200 OK in 100ms (Views: 85.6ms | ActiveRecord: 8.5ms | Allocations: 44699)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:37:14 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 20.5ms | Allocations: 5517)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 42)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.slim (Duration: 30.7ms | Allocations: 9214)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 10441)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:37:15 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 16.5ms | Allocations: 3493)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 3986)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:39:23 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.7ms | Allocations: 3492)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 3948)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:49:52 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 15.0ms | Allocations: 3491)
+Completed 200 OK in 22ms (Views: 18.8ms | Allocations: 3940)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:53:07 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 7.3ms | Allocations: 5584)
+  Rendered shared/_header.html.slim (Duration: 12.5ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 18.7ms | Allocations: 20264)
+  Rendered layout layouts/application.html.slim (Duration: 52.6ms | Allocations: 44691)
+Completed 200 OK in 59ms (Views: 55.6ms | Allocations: 46055)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:53:14 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 57.5ms | Allocations: 5511)
+  Rendered shared/_header.html.slim (Duration: 11.4ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.6ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 99.1ms | Allocations: 44624)
+Completed 200 OK in 107ms (Views: 103.7ms | Allocations: 46012)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:54:01 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 8.9ms | Allocations: 3492)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 3985)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:57:56 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.3ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 7.2ms | Allocations: 3489)
+Completed 200 OK in 10ms (Views: 8.0ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:58:37 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.4ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.4ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 16.9ms | Allocations: 3498)
+Completed 200 OK in 21ms (Views: 18.8ms | Allocations: 3942)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 21:59:24 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered shared/_header.html.slim (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 20.7ms | Allocations: 3489)
+Completed 200 OK in 23ms (Views: 21.6ms | Allocations: 3933)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 22:01:22 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 11.1ms | Allocations: 5526)
+  Rendered shared/_header.html.slim (Duration: 25.3ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 19.7ms | Allocations: 20267)
+  Rendered layout layouts/application.html.slim (Duration: 70.8ms | Allocations: 44629)
+Completed 200 OK in 84ms (Views: 75.7ms | Allocations: 45976)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 22:05:36 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 73.5ms | Allocations: 13989)
+  Rendered layout layouts/application.html.slim (Duration: 73.7ms | Allocations: 14076)
+Completed 500 Internal Server Error in 79ms (Allocations: 15437)
+
+
+
+NameError - undefined local variable or method `maps_search_path' for #<ActionView::Base:0x0000000000a050>
+Did you mean?  maps_result_path:
+  app/views/maps/search.html.slim:3
+
+Started POST "/__better_errors/33e87a1100a2c26e/variables" for ::1 at 2022-01-23 22:05:36 +0900
+Started GET "/maps" for ::1 at 2022-01-23 22:05:51 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 62.2ms | Allocations: 9828)
+  Rendered layout layouts/application.html.slim (Duration: 62.7ms | Allocations: 9908)
+Completed 500 Internal Server Error in 74ms (Allocations: 11313)
+
+
+
+NameError - undefined local variable or method `search_path' for #<ActionView::Base:0x0000000000a168>
+Did you mean?  search_field_tag:
+  app/views/maps/search.html.slim:3
+
+Started POST "/__better_errors/c821e1aaaa950cc4/variables" for ::1 at 2022-01-23 22:05:51 +0900
+Started POST "/__better_errors/c821e1aaaa950cc4/eval" for ::1 at 2022-01-23 22:06:05 +0900
+Started POST "/__better_errors/c821e1aaaa950cc4/eval" for ::1 at 2022-01-23 22:06:08 +0900
+Started GET "/maps" for ::1 at 2022-01-23 22:06:34 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 43.0ms | Allocations: 8944)
+  Rendered shared/_header.html.slim (Duration: 11.8ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 16.7ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 85.6ms | Allocations: 48031)
+Completed 200 OK in 95ms (Views: 91.5ms | Allocations: 49475)
+
+
+Started GET "/maps" for ::1 at 2022-01-23 22:06:58 +0900
+Processing by MapsController#search as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 6.0ms | Allocations: 4630)
+  Rendered shared/_header.html.slim (Duration: 10.9ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 22.9ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 50.7ms | Allocations: 43710)
+Completed 200 OK in 54ms (Views: 52.4ms | Allocations: 45110)
+
+
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:07:02 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.1ms | Allocations: 192)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 13.3ms | Allocations: 3651)
+Completed 200 OK in 17ms (Views: 15.1ms | Allocations: 4145)
+
+
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:07:03 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.6ms | Allocations: 192)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 16.3ms | Allocations: 3651)
+Completed 200 OK in 20ms (Views: 17.9ms | Allocations: 4098)
+
+
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:07:04 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.5ms | Allocations: 192)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 16.8ms | Allocations: 3640)
+Completed 200 OK in 20ms (Views: 18.4ms | Allocations: 4086)
+
+
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:07:35 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 50.1ms | Allocations: 11333)
+  Rendered layout layouts/application.html.slim (Duration: 50.4ms | Allocations: 11411)
+Completed 500 Internal Server Error in 53ms (Allocations: 12709)
+
+
+
+NameError - undefined local variable or method `maps_search_path' for #<ActionView::Base:0x0000000000a618>
+Did you mean?  maps_result_path:
+  app/views/maps/search.html.slim:3
+
+Started POST "/__better_errors/eccb202db16bdf69/variables" for ::1 at 2022-01-23 22:07:35 +0900
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:09:00 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 17.2ms | Allocations: 6691)
+  Rendered layout layouts/application.html.slim (Duration: 17.7ms | Allocations: 6770)
+Completed 500 Internal Server Error in 26ms (Allocations: 8174)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+input#pac-input.controls placeholder="キーワード検索" type="text"
+= form_with scope: :q, url: maps_path, method: :get do |f|
+  => f.text_field id: 'lat' value=""
+  => f.text_field id: 'lng' value=""
+  => f.submit '検索'
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places":
+
+Started POST "/__better_errors/d5da32fbe6431c72/variables" for ::1 at 2022-01-23 22:09:00 +0900
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:09:00 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 20.5ms | Allocations: 6654)
+  Rendered layout layouts/application.html.slim (Duration: 21.0ms | Allocations: 6728)
+Completed 500 Internal Server Error in 25ms (Allocations: 7231)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+input#pac-input.controls placeholder="キーワード検索" type="text"
+= form_with scope: :q, url: maps_path, method: :get do |f|
+  => f.text_field id: 'lat' value=""
+  => f.text_field id: 'lng' value=""
+  => f.submit '検索'
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places":
+
+Started POST "/__better_errors/f5bfd1a244ee91aa/variables" for ::1 at 2022-01-23 22:09:01 +0900
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:10:27 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 18.8ms | Allocations: 6668)
+  Rendered layout layouts/application.html.slim (Duration: 19.3ms | Allocations: 6747)
+Completed 500 Internal Server Error in 30ms (Allocations: 8148)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+input#pac-input.controls placeholder="キーワード検索" type="text"
+= form_with scope: :q, url: maps_path, method: :get do |f|
+  => f.text_field id: 'lat' value: ""
+  => f.text_field id: 'lng' value: ""
+  => f.submit '検索'
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places":
+
+Started POST "/__better_errors/5384f68c645859e6/variables" for ::1 at 2022-01-23 22:10:27 +0900
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:14:57 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 17.7ms | Allocations: 6681)
+  Rendered layout layouts/application.html.slim (Duration: 18.2ms | Allocations: 6760)
+Completed 500 Internal Server Error in 29ms (Allocations: 8160)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check #map.h-96.w-full
+input#pac-input.controls placeholder="キーワード検索" type="text"
+= form_with scope: :q, url: maps_path, method: :get do |f|
+  => f.text_field :latitude, id: 'lat' value: ''
+  => f.text_field :longitude, id: 'lng' value: ''
+  => f.submit '検索'
+script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places":
+
+Started POST "/__better_errors/b64664406eb2d067/variables" for ::1 at 2022-01-23 22:14:57 +0900
+Started GET "/maps?q%5B%7B%3Aid%3D%3E%22lat%22%7D%5D=&q%5B%7B%3Aid%3D%3E%22lng%22%7D%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:16:52 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"{:id=>\"lat\"}"=>"", "{:id=>\"lng\"}"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 12.1ms | Allocations: 4634)
+  Rendered shared/_header.html.slim (Duration: 13.6ms | Allocations: 10949)
+  Rendered shared/_footer.html.slim (Duration: 17.6ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 60.0ms | Allocations: 43740)
+Completed 200 OK in 67ms (Views: 64.7ms | Allocations: 45187)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.65140778889795&q%5Blongitude%5D=139.74043137036134&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:16:57 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.65140778889795", "longitude"=>"139.74043137036134"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 2.0ms | Allocations: 188)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 13.1ms | Allocations: 3636)
+Completed 200 OK in 17ms (Views: 14.9ms | Allocations: 4129)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.64806&q%5Blongitude%5D=139.741633&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:16:59 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.64806", "longitude"=>"139.741633"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.2ms | Allocations: 188)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 13.8ms | Allocations: 3636)
+Completed 200 OK in 18ms (Views: 15.5ms | Allocations: 4082)
+
+

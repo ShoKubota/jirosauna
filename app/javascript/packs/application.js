@@ -9,6 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "stylesheets/application.css"
 
+require ('google_maps.js')
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
