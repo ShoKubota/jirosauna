@@ -47,6 +47,9 @@ gem 'open_uri_redirections'
 #Security
 gem 'dotenv-rails'
 
+# Geolocation
+gem 'geokit-rails'
+
 # Normalize phone number
 gem 'phony_rails'
 

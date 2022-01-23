@@ -23704,3 +23704,39 @@ Processing by MapsController#search as HTML
 Completed 200 OK in 18ms (Views: 15.5ms | Allocations: 4082)
 
 
+Started GET "/maps?q%5Blatitude%5D=35.65140778889795&q%5Blongitude%5D=139.74043137036134&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:19:00 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.65140778889795", "longitude"=>"139.74043137036134"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.6ms | Allocations: 188)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 14.7ms | Allocations: 3636)
+Completed 200 OK in 20ms (Views: 17.7ms | Allocations: 4082)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.66744733043643&q%5Blongitude%5D=139.70052010021973&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:19:19 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.66744733043643", "longitude"=>"139.70052010021973"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 1.7ms | Allocations: 188)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 40)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 36.1ms | Allocations: 3648)
+Completed 200 OK in 40ms (Views: 37.7ms | Allocations: 4095)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.66744733043643&q%5Blongitude%5D=139.70052010021973&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-23 22:19:36 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.66744733043643", "longitude"=>"139.70052010021973"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  Rendered maps/search.html.slim within layouts/application (Duration: 2.0ms | Allocations: 188)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 20.7ms | Allocations: 3647)
+Completed 200 OK in 26ms (Views: 22.7ms | Allocations: 4094)
+
+
