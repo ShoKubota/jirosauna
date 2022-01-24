@@ -30712,3 +30712,477 @@ Processing by MapsController#search as HTML
 Completed 200 OK in 49ms (Views: 31.8ms | ActiveRecord: 8.2ms | Allocations: 8623)
 
 
+Started GET "/maps?q%5Blatitude%5D=35.650222&q%5Blongitude%5D=139.7158404&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:22:17 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.650222", "longitude"=>"139.7158404"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (3.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17
+  [1m[36mSauna Load (2.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25
+  Rendered maps/search.html.slim within layouts/application (Duration: 26.9ms | Allocations: 14280)
+  Rendered shared/_header.html.slim (Duration: 11.4ms | Allocations: 10940)
+  Rendered shared/_footer.html.slim (Duration: 17.4ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 85.6ms | Allocations: 55454)
+Completed 200 OK in 97ms (Views: 83.1ms | ActiveRecord: 5.5ms | Allocations: 57463)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.650222&q%5Blongitude%5D=139.7158404&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:22:23 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.650222", "longitude"=>"139.7158404"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (2.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17
+  Rendered maps/search.html.slim within layouts/application (Duration: 25.4ms | Allocations: 18754)
+  Rendered layout layouts/application.html.slim (Duration: 25.7ms | Allocations: 18832)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.3ms | Allocations: 20926)
+
+
+
+NameError - undefined local variable or method `i' for #<ActionView::Base:0x000000000123e0>
+Did you mean?  @@id:
+  app/views/maps/search.html.slim:19
+  app/views/maps/search.html.slim:17
+
+Started POST "/__better_errors/f7652717a5914a39/variables" for ::1 at 2022-01-24 21:22:23 +0900
+  [1m[36mSauna Load (8.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+  [1m[36mCACHE Sauna Load (0.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/maps?q%5Blatitude%5D=35.650222&q%5Blongitude%5D=139.7158404&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:22:38 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.650222", "longitude"=>"139.7158404"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (4.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17
+  [1m[36mSauna Load (2.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.63674438786324 AND shops.latitude < 35.66369961213676 AND shops.longitude > 139.69925441103547 AND shops.longitude < 139.7324263889645 AND 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6222137529669179)*COS(2.438501432170911)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6222137529669179)*SIN(2.438501432170911)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6222137529669179)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25
+  Rendered maps/search.html.slim within layouts/application (Duration: 40.2ms | Allocations: 14278)
+  Rendered shared/_header.html.slim (Duration: 12.5ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 16.5ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 91.4ms | Allocations: 55448)
+Completed 200 OK in 109ms (Views: 89.8ms | ActiveRecord: 6.6ms | Allocations: 57622)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:23:06 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (5.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17
+  [1m[36mSauna Load (4.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25
+  Rendered maps/search.html.slim within layouts/application (Duration: 21.8ms | Allocations: 2120)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 42.4ms | Allocations: 7776)
+Completed 200 OK in 57ms (Views: 34.7ms | ActiveRecord: 9.5ms | Allocations: 9005)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:29:51 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (4.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 37.1ms | Allocations: 18960)
+  Rendered layout layouts/application.html.slim (Duration: 37.3ms | Allocations: 19038)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 22.5ms | Allocations: 25117)
+
+
+
+NameError - undefined local variable or method `i' for #<ActionView::Base:0x000000000127c8>
+Did you mean?  @@id:
+  app/views/maps/search.html.slim:19
+  app/views/maps/search.html.slim:17
+
+Started POST "/__better_errors/2c35353089b63565/variables" for ::1 at 2022-01-24 21:29:51 +0900
+  [1m[36mSauna Load (6.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+  [1m[36mCACHE Sauna Load (0.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:30:10 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (3.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 40.3ms | Allocations: 16500)
+  Rendered layout layouts/application.html.slim (Duration: 40.7ms | Allocations: 16578)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.7ms | Allocations: 18705)
+
+
+
+NoMethodError - undefined method `name' for 0:Integer:
+  app/views/maps/search.html.slim:19
+  app/views/maps/search.html.slim:17
+
+Started POST "/__better_errors/74d7736e0f7c948c/variables" for ::1 at 2022-01-24 21:30:10 +0900
+  [1m[36mSauna Load (2.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+  [1m[36mCACHE Sauna Load (0.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:30:12 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (4.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 36.0ms | Allocations: 4286)
+  Rendered layout layouts/application.html.slim (Duration: 36.4ms | Allocations: 4359)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 4.9ms | Allocations: 5591)
+
+
+
+NoMethodError - undefined method `name' for 0:Integer:
+  app/views/maps/search.html.slim:19
+  app/views/maps/search.html.slim:17
+
+Started POST "/__better_errors/e8f08ad6682a4988/variables" for ::1 at 2022-01-24 21:30:12 +0900
+  [1m[36mSauna Load (2.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+  [1m[36mCACHE Sauna Load (0.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) /* loading for inspect */ ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC LIMIT $2[0m  [["type", "Sauna"], ["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:30:57 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (4.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  [1m[36mSauna Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 40.3ms | Allocations: 14377)
+  Rendered shared/_header.html.slim (Duration: 12.2ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 117.9ms | Allocations: 20273)
+  Rendered layout layouts/application.html.slim (Duration: 192.9ms | Allocations: 55877)
+Completed 200 OK in 214ms (Views: 189.7ms | ActiveRecord: 8.0ms | Allocations: 58054)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:31:46 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  [1m[36mSauna Load (2.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 24.9ms | Allocations: 14377)
+  Rendered shared/_header.html.slim (Duration: 11.8ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 17.8ms | Allocations: 20262)
+  Rendered layout layouts/application.html.slim (Duration: 71.7ms | Allocations: 55865)
+Completed 200 OK in 80ms (Views: 69.0ms | ActiveRecord: 5.7ms | Allocations: 57990)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:31:54 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (5.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  [1m[36mSauna Load (4.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 22.1ms | Allocations: 2143)
+  Rendered shared/_header.html.slim (Duration: 0.2ms | Allocations: 39)
+  Rendered shared/_footer.html.slim (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.slim (Duration: 42.8ms | Allocations: 7795)
+Completed 200 OK in 57ms (Views: 33.9ms | ActiveRecord: 10.2ms | Allocations: 9025)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:32:10 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (2.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  [1m[36mSauna Load (2.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 20.9ms | Allocations: 14374)
+  Rendered shared/_header.html.slim (Duration: 10.7ms | Allocations: 10936)
+  Rendered shared/_footer.html.slim (Duration: 23.4ms | Allocations: 20273)
+  Rendered layout layouts/application.html.slim (Duration: 71.1ms | Allocations: 55869)
+Completed 200 OK in 76ms (Views: 68.6ms | ActiveRecord: 4.3ms | Allocations: 57846)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:32:50 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  [1m[36mSauna Load (2.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:25:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 24.3ms | Allocations: 14754)
+  Rendered shared/_header.html.slim (Duration: 11.3ms | Allocations: 10944)
+  Rendered shared/_footer.html.slim (Duration: 25.0ms | Allocations: 20263)
+  Rendered layout layouts/application.html.slim (Duration: 77.7ms | Allocations: 56246)
+Completed 200 OK in 86ms (Views: 74.7ms | ActiveRecord: 5.2ms | Allocations: 58371)
+
+
+Started GET "/maps?q%5Blatitude%5D=35.658312&q%5Blongitude%5D=139.7675104&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2022-01-24 21:33:19 +0900
+Processing by MapsController#search as HTML
+  Parameters: {"q"=>{"latitude"=>"35.658312", "longitude"=>"139.7675104"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.slim
+  Rendering maps/search.html.slim within layouts/application
+  [1m[36mJiro Load (2.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Jiro"]]
+  ↳ app/views/maps/search.html.slim:17:in `each_with_index'
+  [1m[36mSauna Load (2.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) AND shops.latitude > 35.64483438786324 AND shops.latitude < 35.67178961213676 AND shops.longitude > 139.75092273096166 AND shops.longitude < 139.78409806903835 AND 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          <= 1.5 AND (shops.latitude IS NOT NULL AND shops.longitude IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.6223549501034042)*COS(2.4394032437954167)*COS(RADIANS(shops.latitude))*COS(RADIANS(shops.longitude))+
+          COS(0.6223549501034042)*SIN(2.4394032437954167)*COS(RADIANS(shops.latitude))*SIN(RADIANS(shops.longitude))+
+          SIN(0.6223549501034042)*SIN(RADIANS(shops.latitude))))*6376.77271)
+          ASC[0m  [["type", "Sauna"]]
+  ↳ app/views/maps/search.html.slim:26:in `each_with_index'
+  Rendered maps/search.html.slim within layouts/application (Duration: 21.7ms | Allocations: 15145)
+  Rendered shared/_header.html.slim (Duration: 10.8ms | Allocations: 10937)
+  Rendered shared/_footer.html.slim (Duration: 16.2ms | Allocations: 20264)
+  Rendered layout layouts/application.html.slim (Duration: 65.1ms | Allocations: 56630)
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 4.6ms | Allocations: 58755)
+
+

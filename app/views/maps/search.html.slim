@@ -14,17 +14,19 @@ script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#
         .py-8.flex.flex-wrap
           .px-4.lg:w-1/2
             h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
-            - @jiros.each do |jiro|
+            - @jiros.each_with_index do |jiro, i|
               .border-b-2.border-gray-200.py-4.bg-teal-100
-                p.font-semibold.text-gray-700 =jiro.name
+                p.font-semibold.text-gray-700 = "#{i + 1}"
+                p.font-semibold.text-gray-700 =" #{jiro.name}"
                 p.mt-.text-gray-500.text-sm =jiro.address
                 p.mt-1.text-gray-500.text-sm ="評価：#{jiro.rating}"
                 p.mt-1.text-gray-500.text-sm ="電話番号：#{jiro.tel_number}" 
           .px-4.lg:w-1/2
             h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
-            - @saunas.each do |sauna|
+            - @saunas.each_with_index do |sauna, i|
               .border-b-2.border-gray-200.py-4.bg-teal-100
-                p.font-semibold.text-gray-700 =sauna .name
+                p.font-semibold.text-gray-700 ="#{i + 1}"
+                p.font-semibold.text-gray-700 =" #{sauna.name}"
                 p.mt-1.text-gray-500.text-sm =sauna.address
                 p.mt-1.text-gray-500.text-sm ="評価：#{sauna.rating}"
                 p.mt-1.text-gray-500.text-sm ="電話番号：#{sauna.tel_number}" 
