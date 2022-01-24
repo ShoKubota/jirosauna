@@ -83,6 +83,30 @@ function initMap() {
     clickMap(e.latLng, map);
   });
 
+  const currentLocation = document.getElementById('current-position');
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(currentLocation );
+
+  currentLocation.addEventListener('click', () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          map.setCenter(pos);
+          var marker = new google.maps.Marker({
+            map : map,             // 対象の地図オブジェクト
+            position : pos,  // 緯度・経度
+            icon: '/assets/current_icon.png'
+          });
+        },
+      );
+    } else {
+      return false
+    }
+  });
+
   // 検索ボックス
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
@@ -145,3 +169,5 @@ function clickMap(lat_lng, map){
   });
 
 }
+
+// 現在地へ移動するボタン

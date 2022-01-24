@@ -1,5 +1,7 @@
 #map.h-96.w-full
 input#pac-input.controls placeholder="キーワード検索" type="text"
+button#current-position
+  | 現在地へ移動する
 = form_with scope: :q, url: maps_path, method: :get do |f|
   => f.number_field :latitude, id: 'lat', step: '0.0000001', value: ''
   => f.number_field :longitude, id: 'lng', step: '0.0000001', value: ''
