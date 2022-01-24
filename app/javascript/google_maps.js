@@ -1,6 +1,8 @@
 var pin = null;
-var lat = 35.64806
-var lng = 139.741633
+var lat = gon.latitude;
+var lng = gon.longitude;
+var jiroMarker = [];
+var saunaMarker = [];
 
 function initMap() {
   // 地図初期化
@@ -29,14 +31,54 @@ function initMap() {
   document.getElementById('lat').value = lat;
   document.getElementById('lng').value = lng;
 
-  // 初期マーカー
+  // 初期ピン
   pin = new google.maps.Marker({
     map: map, 
     position: new google.maps.LatLng(lat, lng),
+    animation: google.maps.Animation.BOUNCE
   });
 
-  // クリックイベント
-  // eはイベントハンドラってやつで、クリックした位置、要素を取得できる。この場合は、クリックした場所の座標？
+  if (gon.jiros) {
+
+    for (var i = 0; i < gon.jiros.length; i++) {
+
+      // 検索結果のジローの座標取得
+      markerLatLng = new google.maps.LatLng({
+        lat: parseFloat(gon.jiros[i]['latitude']),
+        lng: parseFloat(gon.jiros[i]['longitude'])
+      });
+
+      // マーカーの作成
+      jiroMarker[i] = new google.maps.Marker({
+        position: markerLatLng,
+        map: map,
+        icon: '/assets/icon_jiro.png',
+        animation: google.maps.Animation.DROP
+      });
+    }
+  }
+
+  if (gon.saunas) {
+
+    for (var i = 0; i < gon.saunas.length; i++) {
+
+      // 検索結果のサウナの座標取得
+      markerLatLng = new google.maps.LatLng({
+        lat: parseFloat(gon.saunas[i]['latitude']),
+        lng: parseFloat(gon.saunas[i]['longitude'])
+      });
+
+      // マーカーの作成
+      saunaMarker[i] = new google.maps.Marker({
+        position: markerLatLng,
+        map: map,
+        icon: '/assets/icon_sauna.png',
+        animation: google.maps.Animation.DROP
+      });
+    }
+  }
+
+  // マップのクリックイベント
   map.addListener('click', function(e){
     clickMap(e.latLng, map);
   });
@@ -44,71 +86,48 @@ function initMap() {
   // 検索ボックス
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
-
+  // 左側に設置
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  // Bias the SearchBox results towards current map's viewport.
   map.addListener("bounds_changed", () => {
-  searchBox.setBounds(map.getBounds());
+    searchBox.setBounds(map.getBounds());
   });
 
-  let markers = [];
-
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
   searchBox.addListener("places_changed", () => {
-  const places = searchBox.getPlaces();
+    const places = searchBox.getPlaces();
 
-  if (places.length == 0) {
-  return;
-  }
+    if (places.length == 0) {
+      return;
+    }
 
-  // Clear out the old markers.
-  markers.forEach((marker) => {
-  marker.setMap(null);
+    const bounds = new google.maps.LatLngBounds();
+
+    places.forEach((place) => {
+      if (!place.geometry || !place.geometry.location) {
+        console.log("検索結果がありませんでした。");
+        return;
+      }
+
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
+    var zoom = map.getZoom();
+    map.setZoom(zoom > 14 ? 14 : zoom);
   });
-  markers = [];
 
-  // For each place, get the icon, name and location.
-  const bounds = new google.maps.LatLngBounds();
-
-  places.forEach((place) => {
-  if (!place.geometry || !place.geometry.location) {
-    console.log("Returned place contains no geometry");
-    return;
-  }
-
-  const icon = {
-    url: place.icon,
-    size: new google.maps.Size(71, 71),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(17, 34),
-    scaledSize: new google.maps.Size(25, 25),
-  };
-
-  // Create a marker for each place.
-  markers.push(
-    new google.maps.Marker({
-      map,
-      icon,
-      title: place.name,
-      position: place.geometry.location,
-    })
-  );
-  if (place.geometry.viewport) {
-    // Only geocodes have viewport.
-    bounds.union(place.geometry.viewport);
-  } else {
-    bounds.extend(place.geometry.location);
-  }
-  });
-  map.fitBounds(bounds);
-  });
 }
 window.initMap = initMap;
 
 function clickMap(lat_lng, map){
   lat = lat_lng.lat();
   lng = lat_lng.lng();
+
+  lat = Math.floor(lat * 10000000) / 10000000;
+  lng = Math.floor(lng * 10000000) / 10000000;
 
   //座標を表示する
   document.getElementById('lat').value = lat;
