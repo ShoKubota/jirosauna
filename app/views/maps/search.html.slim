@@ -3,8 +3,8 @@ input#pac-input.controls placeholder="キーワード検索" type="text"
 button#current-position
   | 現在地へ移動する
 = form_with scope: :q, url: maps_path, method: :get do |f|
-  => f.number_field :latitude, id: 'lat', step: '0.0000001', value: ''
-  => f.number_field :longitude, id: 'lng', step: '0.0000001', value: ''
+  => f.number_field :latitude, id: 'lat', step: '0.0000001', value: '', type: 'hidden'
+  => f.number_field :longitude, id: 'lng', step: '0.0000001', value: '', type: 'hidden'
   => f.submit '検索'
 script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places"
 - if @jiros || @saunas

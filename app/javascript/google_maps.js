@@ -38,6 +38,18 @@ function initMap() {
     animation: google.maps.Animation.BOUNCE
   });
 
+  circle = new google.maps.Circle({
+    center: new google.maps.LatLng(lat, lng),
+    map: map,
+    radius: 1500,
+    clickable: false,
+    fillColor: '#297EDD',
+    fillOpacity: 0.1,
+    strokeColor: '#297EDD',
+    strokeOpacity: 0.6,
+    strokeWeight: 0.7,
+  });
+
   if (gon.jiros) {
 
     for (var i = 0; i < gon.jiros.length; i++) {
@@ -52,7 +64,10 @@ function initMap() {
       jiroMarker[i] = new google.maps.Marker({
         position: markerLatLng,
         map: map,
-        icon: '/assets/icon_jiro.png',
+        icon: { 
+          url: `/assets/jiro_${i}.png`,
+          scaledSize: new google.maps.Size(30, 46)
+        },
         animation: google.maps.Animation.DROP
       });
     }
@@ -72,7 +87,10 @@ function initMap() {
       saunaMarker[i] = new google.maps.Marker({
         position: markerLatLng,
         map: map,
-        icon: '/assets/icon_sauna.png',
+        icon: { 
+          url: `/assets/sauna_${i}.png`,
+          scaledSize: new google.maps.Size(30, 46)
+        },
         animation: google.maps.Animation.DROP
       });
     }
