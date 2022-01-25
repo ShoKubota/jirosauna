@@ -87,6 +87,7 @@ function initMap() {
       saunaMarker[i] = new google.maps.Marker({
         position: markerLatLng,
         map: map,
+        url: 'google.com',
         icon: { 
           url: `/assets/sauna_${i}.png`,
           scaledSize: new google.maps.Size(30, 46)
@@ -96,12 +97,15 @@ function initMap() {
     }
   }
 
-  // マップのクリックイベント
+  // ピンの移動
   map.addListener('click', function(e){
     clickMap(e.latLng, map);
   });
 
-  const currentLocation = document.getElementById('current-position');
+  // 現在地へ移動ボタン
+  const currentLocation = document.createElement('button');
+  currentLocation.textContent = '現在地へ移動する';
+  currentLocation.classList.add('block', 'mt-3', 'mr-5', 'text-white', 'text-white', 'bg-blue-700', 'rounded-full', 'hover:bg-blue-800', 'font-semibold', 'text-sm', 'px-5', 'py-2.5', 'text-center')
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(currentLocation );
 
   currentLocation.addEventListener('click', () => {
@@ -184,6 +188,20 @@ function clickMap(lat_lng, map){
   pin = new google.maps.Marker({
     position: lat_lng,
     map: map
+  });
+
+  circle.setMap(null);
+  circle = null;
+  circle = new google.maps.Circle({
+    center: new google.maps.LatLng(lat, lng),
+    map: map,
+    radius: 1500,
+    clickable: false,
+    fillColor: '#297EDD',
+    fillOpacity: 0.1,
+    strokeColor: '#297EDD',
+    strokeOpacity: 0.6,
+    strokeWeight: 0.7,
   });
 
 }
