@@ -27,8 +27,8 @@
             div.distance.relative.w-52.ml-auto
               p.text-gray-500.text-sm.absolute.bottom-0.right-0
                 | 中心から約
-                span.text-5xl 
-                  | 700
+                span.text-5xl
+                  =" #{jiro.get_distance(@latitude, @longitude)} "
                 | m
       h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
       - @saunas.each_with_index do |sauna, i|
@@ -56,5 +56,5 @@
               p.text-gray-500.text-sm.absolute.bottom-0.right-0
                 | 中心から約
                 span.text-5xl 
-                  | 700
+                  =" #{sauna.get_distance(@latitude, @longitude)} "
                 | m
