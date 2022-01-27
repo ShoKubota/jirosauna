@@ -37,6 +37,7 @@ gem 'enum_help'
 # UI/UX
 gem 'slim-rails'
 gem 'html2slim'
+gem 'draper'
 
 # Scraping
 gem 'nokogiri'
