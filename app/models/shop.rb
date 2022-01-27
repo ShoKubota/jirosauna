@@ -12,4 +12,29 @@ class Shop < ApplicationRecord
   validates :latitude, presence: true
   validates :place_id, presence: true, uniqueness: true
   validates :address, presence: true, uniqueness: true
+
+  def opening_hour_today
+    return '現在調査中です。' unless opening_hours
+      array_opening_hour = opening_hours.delete('\"[]').split(',')
+      opening_hour = array_opening_hour.slice_when{ |_a, b| b.include?("曜日") }.to_a
+    if Date.today.wday == 0
+      opening_hour[7].join(',')
+    elsif Date.today.wday == 1
+      opening_hour[0].join(',')
+    elsif Date.today.wday == 2
+      opening_hour[1].join(',')
+    elsif Date.today.wday == 3
+      opening_hour[2].join(',')
+    elsif Date.today.wday == 4
+      opening_hour[3].join(',')
+    elsif Date.today.wday == 5
+      opening_hour[4].join(',')
+    else Date.today.wday == 6
+      opening_hour[5].join(',')
+    end
+  end
+
+  def show_tel_number
+    tel_number.present? ? tel_number : '非公開'
+  end
 end

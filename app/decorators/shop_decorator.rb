@@ -10,4 +10,5 @@ class ShopDecorator < Draper::Decorator
   #     end
   #   end
 
+  
 end

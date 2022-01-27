@@ -15,9 +15,15 @@
               div.info.ml-2
                 .rating.my-4
                   p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
-                p.mt-.text-gray-500.text-sm =jiro.address
-                p.mt-1.text-gray-500.text-sm ="電話番号：#{jiro.tel_number}"
-                p.mt-1.text-gray-500.text-sm 営業時間
+                p.mt-.text-gray-500.text-sm 
+                  | 住所 
+                  span.text-base ="#{jiro.address}"
+                p.mt-1.text-gray-500.text-xs 
+                  | お問い合わせ 
+                  span.text-base ="#{jiro.show_tel_number}"
+                p.mt-1.text-gray-500.text-xs
+                  | 営業時間 
+                  span.text-base="#{jiro.opening_hour_today}"
             div.distance.relative.w-52.ml-auto
               p.text-gray-500.text-sm.absolute.bottom-0.right-0
                 | 中心から約
@@ -37,9 +43,15 @@
               div.info.ml-2
                 .rating.my-4
                   p.mt-1.text-gray-500.text-lg ="#{sauna.rating}"
-                p.mt-.text-gray-500.text-sm ="#{sauna.address}"
-                p.mt-1.text-gray-500.text-sm ="電話番号：#{sauna.tel_number}"
-                p.mt-1.text-gray-500.text-sm 営業時間
+                p.mt-.text-gray-500.text-sm 
+                  | 住所 
+                  span.text-base ="#{sauna.address}"
+                p.mt-1.text-gray-500.text-xs 
+                  | お問い合わせ 
+                  span.text-base ="#{sauna.show_tel_number}"
+                p.mt-1.text-gray-500.text-xs
+                  | 営業時間 
+                  span.text-base="#{sauna.opening_hour_today}"
             div.distance.relative.w-52.ml-auto
               p.text-gray-500.text-sm.absolute.bottom-0.right-0
                 | 中心から約
