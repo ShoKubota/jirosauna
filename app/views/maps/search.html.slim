@@ -1,36 +1,48 @@
-.map-container.relative
-  input#pac-input.controls.absolute.mt-3.ml-5.px-8.py-2.5.rounded-full.text-sm.text-semibold placeholder="キーワード検索" type="text"
-  
-  #map.h-96.w-full
-  .item-center
-    = form_with scope: :q, url: maps_path, method: :get do |f|
-      => f.number_field :latitude, id: 'lat', step: '0.0000001', value: '', type: 'hidden'
-      => f.number_field :longitude, id: 'lng', step: '0.0000001', value: '', type: 'hidden'
-      .text-center.mt-10
-        => f.submit '周辺の二郎とサウナを探す', class: 'text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-  script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places"
-= link_to "アンカーリンク", '/maps#sauna-0'
-- if @jiros || @saunas
-  section.text-gray-600.body-font.overflow-hidden
-    .container.px-5.py-24.mx-auto
-      .divide-y-2.divide-gray-100
-        .py-8.flex.flex-wrap
-          .px-4.lg:w-1/2
-            h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
-            - @jiros.each_with_index do |jiro, i|
-              .border-b-2.border-gray-200.py-4.bg-teal-100
-                p.font-semibold.text-gray-700 = link_to "#{i + 1}", '#', name: "jiro-#{i}"
-                p.font-semibold.text-gray-700 =" #{jiro.name}"
+.container.mx-auto
+  == render 'shared/maps'
+  - if @jiros || @saunas
+    section.text-gray-600.body-font.overflow-hidden.px-5.py-24.mx-auto
+      h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
+      - @jiros.each_with_index do |jiro, i|
+        .border.rounded-lg.mx-4.my-6.shadow-lg
+          .my-6.mx-6.flex
+            div
+              = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
+            .ml-5
+              .flex
+                span.inline-block.text-2xl.text-white.w-10.h-10.bg-yellow-300.rounded-full.text-center.leading-relaxed ="#{i + 1}"
+                h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
+              div.info.ml-2
+                .rating.my-4
+                  p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
                 p.mt-.text-gray-500.text-sm =jiro.address
-                p.mt-1.text-gray-500.text-sm ="評価：#{jiro.rating}"
-                p.mt-1.text-gray-500.text-sm ="電話番号：#{jiro.tel_number}" 
-          .px-4.lg:w-1/2
-            h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
-            - @saunas.each_with_index do |sauna, i|
-              .border-b-2.border-gray-200.py-4.bg-teal-100
-                a.font-semibold.text-gray-700 id="sauna-#{i}"
-                  | #{i + 1}
-                p.font-semibold.text-gray-700 id="sauna-#{sauna.id}" = "#{sauna.name}"
-                p.mt-1.text-gray-500.text-sm =sauna.address
-                p.mt-1.text-gray-500.text-sm ="評価：#{sauna.rating}"
-                p.mt-1.text-gray-500.text-sm ="電話番号：#{sauna.tel_number}" 
+                p.mt-1.text-gray-500.text-sm ="電話番号：#{jiro.tel_number}"
+                p.mt-1.text-gray-500.text-sm 営業時間
+            div.distance.relative.w-52.ml-auto
+              p.text-gray-500.text-sm.absolute.bottom-0.right-0
+                | 中心から約
+                span.text-5xl 
+                  | 700
+                | m
+      h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
+      - @saunas.each_with_index do |sauna, i|
+        .border.rounded-lg.mx-4.my-6.shadow-lg
+          .my-6.mx-6.flex
+            div
+              = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
+            .ml-5
+              .flex
+                span.inline-block.text-2xl.text-white.w-10.h-10.bg-blue-600.rounded-full.text-center.leading-relaxed ="#{i + 1}"
+                h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{sauna.name}"
+              div.info.ml-2
+                .rating.my-4
+                  p.mt-1.text-gray-500.text-lg ="#{sauna.rating}"
+                p.mt-.text-gray-500.text-sm ="#{sauna.address}"
+                p.mt-1.text-gray-500.text-sm ="電話番号：#{sauna.tel_number}"
+                p.mt-1.text-gray-500.text-sm 営業時間
+            div.distance.relative.w-52.ml-auto
+              p.text-gray-500.text-sm.absolute.bottom-0.right-0
+                | 中心から約
+                span.text-5xl 
+                  | 700
+                | m

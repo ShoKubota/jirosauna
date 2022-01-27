@@ -12,7 +12,7 @@ function initMap() {
       streetViewControl: false,
       fullscreenControl: false,
       mapTypeControl: false,
-      zoom: 14,
+      zoom: 13,
       styles: [
               {
                 featureType: 'all',
@@ -105,7 +105,7 @@ function initMap() {
   // 現在地へ移動ボタン
   const currentLocation = document.createElement('button');
   currentLocation.textContent = '現在地へ移動する';
-  currentLocation.classList.add('block', 'mt-3', 'mr-5', 'text-white', 'text-white', 'bg-blue-700', 'rounded-full', 'hover:bg-blue-800', 'font-semibold', 'text-sm', 'px-5', 'py-2.5', 'text-center')
+  currentLocation.classList.add('block', 'mt-3', 'mr-5', 'text-white', 'text-white', 'bg-blue-700', 'rounded-full', 'hover:bg-blue-800', 'font-semibold', 'text-sm', 'px-5', 'py-2.5', 'text-center', 'drop-shadow-lg')
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(currentLocation );
 
   currentLocation.addEventListener('click', () => {
@@ -162,7 +162,7 @@ function initMap() {
     });
     map.fitBounds(bounds);
     var zoom = map.getZoom();
-    map.setZoom(zoom > 14 ? 14 : zoom);
+    map.setZoom(zoom > 13 ? 13 : zoom);
   });
 
 }
