@@ -13,8 +13,20 @@
                 span.inline-block.text-2xl.text-white.w-10.h-10.bg-yellow-300.rounded-full.text-center.leading-relaxed ="#{i + 1}"
                 h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
               div.info.ml-2
-                .rating.my-4
+                .flex.my-4
                   p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
+                  .flex.ml-2 id="jiro-rate-#{jiro.id}"
+                  javascript:
+                    $("#jiro-rate-#{jiro.id}").raty({
+                      size: 12,
+                      starOff: "#{asset_path('star-off.png')}",
+                      starOn: "#{asset_path('star-on.png')}",
+                      starHalf: "#{asset_path('star-half.png')}",
+                      half: true,
+                      readOnly: true,
+                      score: "#{jiro.rating}",
+                    });
+
                 p.mt-.text-gray-500.text-sm 
                   | 住所 
                   span.text-base ="#{jiro.address}"
@@ -41,8 +53,19 @@
                 span.inline-block.text-2xl.text-white.w-10.h-10.bg-blue-600.rounded-full.text-center.leading-relaxed ="#{i + 1}"
                 h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{sauna.name}"
               div.info.ml-2
-                .rating.my-4
+                .flex.my-4
                   p.mt-1.text-gray-500.text-lg ="#{sauna.rating}"
+                  .flex.ml-2 id="sauna-rate-#{sauna.id}"
+                  javascript:
+                    $("#sauna-rate-#{sauna.id}").raty({
+                      size: 12,
+                      starOff: "#{asset_path('star-off.png')}",
+                      starOn: "#{asset_path('star-on.png')}",
+                      starHalf: "#{asset_path('star-half.png')}",
+                      half: true,
+                      readOnly: true,
+                      score: "#{sauna.rating}",
+                    });
                 p.mt-.text-gray-500.text-sm 
                   | 住所 
                   span.text-base ="#{sauna.address}"
