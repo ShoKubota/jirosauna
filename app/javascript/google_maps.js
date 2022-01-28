@@ -52,7 +52,7 @@ function initMap() {
 
   if (gon.jiros) {
 
-    for (var i = 0; i < gon.jiros.length; i++) {
+    for (let i = 0; i < gon.jiros.length; i++) {
 
       // 検索結果のジローの座標取得
       markerLatLng = new google.maps.LatLng({
@@ -70,12 +70,15 @@ function initMap() {
         },
         animation: google.maps.Animation.DROP
       });
+      jiroMarker[i].addListener('click', () => {
+        location.hash = `#jiro-${gon.jiros[i]['id']}`;
+      });
     }
   }
 
   if (gon.saunas) {
 
-    for (var i = 0; i < gon.saunas.length; i++) {
+    for (let i = 0; i < gon.saunas.length; i++) {
 
       // 検索結果のサウナの座標取得
       markerLatLng = new google.maps.LatLng({
@@ -87,12 +90,14 @@ function initMap() {
       saunaMarker[i] = new google.maps.Marker({
         position: markerLatLng,
         map: map,
-        url: 'google.com',
         icon: { 
           url: `/assets/sauna_${i}.png`,
           scaledSize: new google.maps.Size(30, 46)
         },
         animation: google.maps.Animation.DROP
+      });
+      saunaMarker[i].addListener('click', () => {
+        location.hash = `#sauna-${gon.saunas[i]['id']}`;
       });
     }
   }

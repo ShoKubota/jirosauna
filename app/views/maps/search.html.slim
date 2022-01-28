@@ -4,7 +4,7 @@
     section.text-gray-600.body-font.overflow-hidden.px-5.py-24.mx-auto
       h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
       - @jiros.each_with_index do |jiro, i|
-        .border.rounded-lg.mx-4.my-6.shadow-lg
+        .border.rounded-lg.mx-4.my-6.shadow-lg id="jiro-#{jiro.id}"
           .my-6.mx-6.flex
             div
               = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
@@ -16,6 +16,7 @@
                 .flex.my-4
                   p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
                   .flex.ml-2 id="jiro-rate-#{jiro.id}"
+                  // のちのち切り出す
                   javascript:
                     $("#jiro-rate-#{jiro.id}").raty({
                       size: 12,
@@ -44,7 +45,7 @@
                 | m
       h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
       - @saunas.each_with_index do |sauna, i|
-        .border.rounded-lg.mx-4.my-6.shadow-lg
+        .border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
           .my-6.mx-6.flex
             div
               = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
