@@ -1,11 +1,13 @@
 .container.mx-auto
   == render 'shared/maps'
-  - if @jiros || @saunas
-    section.text-gray-600.body-font.overflow-hidden.px-5.py-24.mx-auto
-      h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
+  section.text-gray-600.body-font.overflow-hidden.px-5.py-24.mx-auto
+    h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
+    - unless @jiros.present?
+      p 近くの二郎系は見つかりませんでした
+    - else
       - @jiros.each_with_index do |jiro, i|
         // ここもパーシャルに切り出す
-        .border.rounded-lg.mx-4.my-6.shadow-lg id="jiro-#{jiro.id}"
+        .jiro-card.border.rounded-lg.mx-4.my-6.shadow-lg id="jiro-#{jiro.id}"
           .my-6.mx-6.flex
             // 画像のサイズ調整
             div 
@@ -45,9 +47,12 @@
                 span.text-5xl
                   =" #{jiro.get_distance(@latitude, @longitude)} "
                 | m
-      h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
+    h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
+    - unless @saunas.present?
+      p 近くの銭湯・サウナは見つかりませんでした
+    -else
       - @saunas.each_with_index do |sauna, i|
-        .border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
+        .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
           .my-6.mx-6.flex
             div
               = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
