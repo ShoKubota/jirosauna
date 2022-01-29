@@ -1,4 +1,4 @@
-section.text-gray-600.body-font.bg-gradient-to-tr.from-sky-400.to-cyan-300
+section.text-gray-600.body-font.bg-blue-100
   .container.mx-auto.flex.px-5.py-24.md:flex-row.flex-col.items-center
     .lg:max-w-lg.lg:w-full.md:w-1/2.w-5/6.mb-10.md:mb-0
       = image_tag('ramen_logo.png', size: '500x500')
@@ -14,18 +14,18 @@ section.text-gray-600.body-font.overflow-hidden
   .container.px-5.py-24.mx-auto
     .divide-y-2.divide-gray-100
       .py-8.flex.flex-wrap
-        .px-4.lg:w-1/3
+        .px-4.lg:w-1/2
           h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
           - @jiros.each do |jiro|
-            .border.border-gray-200.py-4.bg-teal-100
+            .border-b-2.border-gray-200.py-4.bg-teal-100
               p.font-semibold.text-gray-700 =jiro.name
               p.mt-.text-gray-500.text-sm =jiro.address
               p.mt-1.text-gray-500.text-sm ="評価：#{jiro.rating}"
               p.mt-1.text-gray-500.text-sm ="電話番号：#{jiro.tel_number}" 
-        .px-4.lg:w-1/3
+        .px-4.lg:w-1/2
           h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
           - @saunas.each do |sauna|
-            .py-4.border 
+            .border-b-2.border-gray-200.py-4.bg-teal-100
               p.font-semibold.text-gray-700 =sauna .name
               p.mt-1.text-gray-500.text-sm =sauna.address
               p.mt-1.text-gray-500.text-sm ="評価：#{sauna.rating}"

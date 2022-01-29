@@ -1,0 +1,10 @@
+section.relative.overflow-hidden
+    input#pac-input.controls.absolute.mt-3.ml-5.px-5.py-2.5.rounded-full.text-sm.text-semibold.drop-shadow-lg placeholder="キーワード検索" type="text"
+    #map.h-96.w-full.rounded-lg
+    .item-center
+      = form_with scope: :q, url: maps_path, method: :get do |f|
+        => f.number_field :latitude, id: 'lat', step: '0.0000001', value: '', type: 'hidden'
+        => f.number_field :longitude, id: 'lng', step: '0.0000001', value: '', type: 'hidden'
+        .text-center.mt-10
+          => f.submit '周辺の二郎とサウナを探す', class: 'text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold text-sm px-5 py-2.5 text-center mr-2 mb-2 drop-shadow-md'
+    script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places"

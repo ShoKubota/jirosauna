@@ -44,6 +44,10 @@ GEM
       globalid (>= 0.3.6)
     activemodel (6.1.4.4)
       activesupport (= 6.1.4.4)
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (6.1.4.4)
       activemodel (= 6.1.4.4)
       activesupport (= 6.1.4.4)
@@ -93,6 +97,13 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    draper (4.0.2)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
+      activemodel-serializers-xml (>= 1.0)
+      activesupport (>= 5.0)
+      request_store (>= 1.0)
+      ruby2_keywords
     enum_help (0.0.18)
       activesupport (>= 3.0.0)
     erubi (1.10.0)
@@ -109,8 +120,17 @@ GEM
     fuubar (2.5.1)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
+    geokit (1.13.1)
+    geokit-rails (2.3.2)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    gon (6.4.0)
+      actionpack (>= 3.0.20)
+      i18n (>= 0.7)
+      multi_json
+      request_store (>= 1.0)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -137,6 +157,7 @@ GEM
     mini_mime (1.1.2)
     minitest (5.15.0)
     msgpack (1.4.2)
+    multi_json (1.15.0)
     nio4r (2.5.8)
     nokogiri (1.13.1-arm64-darwin)
       racc (~> 1.4)
@@ -197,6 +218,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.2.0)
+    request_store (1.5.1)
+      rack (>= 1.4)
     rexml (3.2.5)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
@@ -231,6 +254,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -301,11 +325,14 @@ DEPENDENCIES
   byebug
   capybara
   dotenv-rails
+  draper
   enum_help
   factory_bot_rails
   faker
   font-awesome-rails
   fuubar
+  geokit-rails
+  gon
   html2slim
   jbuilder (~> 2.7)
   jquery-rails

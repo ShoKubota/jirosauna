@@ -37,6 +37,7 @@ gem 'enum_help'
 # UI/UX
 gem 'slim-rails'
 gem 'html2slim'
+gem 'draper'
 
 # Scraping
 gem 'nokogiri'
@@ -47,8 +48,14 @@ gem 'open_uri_redirections'
 #Security
 gem 'dotenv-rails'
 
+# Geolocation
+gem 'geokit-rails'
+
 # Normalize phone number
 gem 'phony_rails'
+
+# JavaScript
+gem 'gon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

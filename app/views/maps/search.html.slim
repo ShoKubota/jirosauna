@@ -1,0 +1,93 @@
+.container.mx-auto
+  == render 'shared/maps'
+  section.text-gray-600.body-font.overflow-hidden.px-5.py-24.mx-auto
+    - unless @jiros.present?
+      h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
+      p 近くの二郎系は見つかりませんでした
+    - else
+      h2.mb-10.font-semibold.text-3xl 二郎系ラーメン
+      - @jiros.each_with_index do |jiro, i|
+        // ここもパーシャルに切り出す
+        .jiro-card.border.rounded-lg.mx-4.my-6.shadow-lg id="jiro-#{jiro.id}"
+          .my-6.mx-6.flex
+            // 画像のサイズ調整
+            div 
+              = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
+            .ml-5
+              .flex
+                span.inline-block.text-2xl.text-white.w-10.h-10.bg-yellow-300.rounded-full.text-center.leading-relaxed ="#{i + 1}"
+                h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
+              .ml-2
+                .flex.my-4
+                  p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
+                  .flex.ml-2 id="jiro-rate-#{jiro.id}"
+                  // のちのち切り出す
+                  javascript:
+                    $("#jiro-rate-#{jiro.id}").raty({
+                      size: 12,
+                      starOff: "#{asset_path('star-off.png')}",
+                      starOn: "#{asset_path('star-on.png')}",
+                      starHalf: "#{asset_path('star-half.png')}",
+                      half: true,
+                      readOnly: true,
+                      score: "#{jiro.rating}",
+                    });
+
+                p.mt-.text-gray-500.text-sm 
+                  | 住所 
+                  span.text-base ="#{jiro.address}"
+                p.mt-1.text-gray-500.text-xs 
+                  | お問い合わせ 
+                  span.text-base ="#{jiro.show_tel_number}"
+                p.mt-1.text-gray-500.text-xs
+                  | 営業時間 
+                  span.text-base="#{jiro.opening_hour_today}"
+            div.distance.relative.w-52.ml-auto
+              p.text-gray-500.text-sm.absolute.bottom-0.right-0
+                | 中心から約
+                span.text-5xl
+                  =" #{jiro.get_distance(@latitude, @longitude)} "
+                | m
+    - unless @saunas.present?
+      h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
+      p 近くの銭湯・サウナは見つかりませんでした
+    -else
+      h2.mb-10.font-semibold.text-3xl 銭湯・サウナ
+      - @saunas.each_with_index do |sauna, i|
+        .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
+          .my-6.mx-6.flex
+            div
+              = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
+            .ml-5
+              .flex
+                span.inline-block.text-2xl.text-white.w-10.h-10.bg-blue-600.rounded-full.text-center.leading-relaxed ="#{i + 1}"
+                h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{sauna.name}"
+              .ml-2
+                .flex.my-4
+                  p.mt-1.text-gray-500.text-lg ="#{sauna.rating}"
+                  .flex.ml-2 id="sauna-rate-#{sauna.id}"
+                  javascript:
+                    $("#sauna-rate-#{sauna.id}").raty({
+                      size: 12,
+                      starOff: "#{asset_path('star-off.png')}",
+                      starOn: "#{asset_path('star-on.png')}",
+                      starHalf: "#{asset_path('star-half.png')}",
+                      half: true,
+                      readOnly: true,
+                      score: "#{sauna.rating}",
+                    });
+                p.mt-.text-gray-500.text-sm 
+                  | 住所 
+                  span.text-base ="#{sauna.address}"
+                p.mt-1.text-gray-500.text-xs 
+                  | お問い合わせ 
+                  span.text-base ="#{sauna.show_tel_number}"
+                p.mt-1.text-gray-500.text-xs
+                  | 営業時間 
+                  span.text-base="#{sauna.opening_hour_today}"
+            div.distance.relative.w-52.ml-auto
+              p.text-gray-500.text-sm.absolute.bottom-0.right-0
+                | 中心から約
+                span.text-5xl 
+                  =" #{sauna.get_distance(@latitude, @longitude)} "
+                | m

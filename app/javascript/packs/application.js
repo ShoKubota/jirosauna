@@ -9,6 +9,10 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "stylesheets/application.css"
 
+window.$ = window.jQuery = require('jquery'); 
+require ('google_maps.js')
+require ('jquery_raty.js')
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
