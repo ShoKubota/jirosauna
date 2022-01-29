@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def get_places_data_from_name(shop)
   # API節約のため、にデータを取得済みの場合は、returnする
   return if aleady_exist?(shop)
@@ -10,7 +12,7 @@ def get_places_data_from_name(shop)
     shop.save
     p "#{shop.name}の情報を保存しました"
   else
-    p "見つかりませんでした"
+    p '見つかりませんでした'
   end
 end
 
@@ -27,7 +29,7 @@ def get_places_data_from_tel_number(shop)
     shop.save
     p "#{shop.name}の情報を保存しました"
   else
-    p "見つかりませんでした"
+    p '見つかりませんでした'
   end
 end
 
@@ -77,7 +79,7 @@ def get_place_id_from_tel_number(shop)
 end
 
 def get_detail_data(shop)
-  puts "詳細情報の取得"
+  puts '詳細情報の取得'
   place_detail_query = URI.encode_www_form(
     place_id: shop.place_id,
     language: 'ja',
@@ -90,9 +92,18 @@ def get_detail_data(shop)
   shop[:longitude] = place_detail_data['result']['geometry']['location']['lng']
   shop[:latitude] = place_detail_data['result']['geometry']['location']['lat']
   shop[:rating] = place_detail_data['result']['rating'] if place_detail_data['result']['rating'].present?
-  shop[:tel_number] = place_detail_data['result']['formatted_phone_number'] if place_detail_data['result']['formatted_phone_number'].present?
-  shop[:opening_hours] = place_detail_data['result']['opening_hours']['weekday_text'] if place_detail_data['result']['opening_hours'].present?
-  shop[:photo_reference] = place_detail_data['result']['photos'][0]['photo_reference'] if place_detail_data['result']['photos'].present?
+  if place_detail_data['result']['formatted_phone_number'].present?
+    shop[:tel_number] =
+      place_detail_data['result']['formatted_phone_number']
+  end
+  if place_detail_data['result']['opening_hours'].present?
+    shop[:opening_hours] =
+      place_detail_data['result']['opening_hours']['weekday_text']
+  end
+  if place_detail_data['result']['photos'].present?
+    shop[:photo_reference] =
+      place_detail_data['result']['photos'][0]['photo_reference']
+  end
   shop[:address] = place_detail_data['result']['formatted_address'][/[^ \d]..?[都道府県].*/]
 
   shop

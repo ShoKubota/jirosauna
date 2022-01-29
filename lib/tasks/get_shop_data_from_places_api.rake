@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './lib/places_api/places_api'
 require 'open-uri'
 require 'open_uri_redirections'
@@ -5,11 +7,11 @@ require 'nokogiri'
 require 'csv'
 
 namespace :get_shop_data_from_places_api do
-  desc "スクレイピング処理"
+  desc 'スクレイピング処理'
   task get_jiro_data: :environment do
-    puts "店舗名から二郎系のデータを取得"
+    puts '店舗名から二郎系のデータを取得'
     base_url = 'https://ramendb.supleks.jp'
-    states = ['tokyo', 'kanagawa', 'saitama', 'chiba']
+    states = %w[tokyo kanagawa saitama chiba]
     jiros = []
     states.each do |state|
       url = "#{base_url}/search?page=1&state=#{state}&city=&order=point&station-id=0&tags=3"
@@ -37,10 +39,10 @@ namespace :get_shop_data_from_places_api do
   end
 
   task get_sauna_data: :environment do
-    puts "電話番号からサウナのデータを取得する"
+    puts '電話番号からサウナのデータを取得する'
     base_url = 'https://www.mapion.co.jp'
     option_url = '/phonebook/M09017/'
-    cities = ['tokyo', 'kanagawa', 'saitama', 'chiba']
+    cities = %w[tokyo kanagawa saitama chiba]
     saunas = []
     cities.each do |city|
       CSV.foreach("lib/#{city}.csv", headers: true) do |city_code|

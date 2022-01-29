@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class Shop < ApplicationRecord
-  acts_as_mappable :default_units => :kms,
-                    :default_formula => :sphere,
-                    :distance_field_name => :distance,
-                    :lat_column_name => :latitude,
-                    :lng_column_name => :longitude
+  acts_as_mappable default_units: :kms,
+                   default_formula: :sphere,
+                   distance_field_name: :distance,
+                   lat_column_name: :latitude,
+                   lng_column_name: :longitude
 
   has_many :shop_images, dependent: :destroy
 
@@ -15,21 +17,23 @@ class Shop < ApplicationRecord
 
   def opening_hour_today
     return '現在調査中です。' unless opening_hours
-      array_opening_hour = opening_hours.delete('\"[]').split(',')
-      opening_hour = array_opening_hour.slice_when{ |_a, b| b.include?("曜日") }.to_a
-    if Date.today.wday == 0
-      opening_hour[7].join(',')
-    elsif Date.today.wday == 1
+
+    array_opening_hour = opening_hours.delete('\"[]').split(',')
+    opening_hour = array_opening_hour.slice_when { |_a, b| b.include?('曜日') }.to_a
+    case Date.today.wday
+    when 0
+      opening_hour[6].join(',')
+    when 1
       opening_hour[0].join(',')
-    elsif Date.today.wday == 2
+    when 2
       opening_hour[1].join(',')
-    elsif Date.today.wday == 3
+    when 3
       opening_hour[2].join(',')
-    elsif Date.today.wday == 4
+    when 4
       opening_hour[3].join(',')
-    elsif Date.today.wday == 5
+    when 5
       opening_hour[4].join(',')
-    else Date.today.wday == 6
+    else
       opening_hour[5].join(',')
     end
   end
@@ -40,8 +44,7 @@ class Shop < ApplicationRecord
 
   def get_distance(latitude, longitude)
     point = Geokit::LatLng.new(latitude, longitude)
-    distance = distance_to(point)*1000
+    distance = distance_to(point) * 1000
     distance.round(-1)
   end
-
 end

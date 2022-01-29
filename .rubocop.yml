@@ -5,6 +5,8 @@ AllCops:
   NewCops: enable    # ← 新しい規約が登録された場合に、適用するかどうかの判定
   Exclude:
     - 'bin/**'
+    - "lib/**/*"
+    - "spec/**/*"
     - 'node_modules/**/*'
     - 'config/**/*'
     - 'config.ru'
@@ -16,5 +18,22 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
 Security/Open:
   Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 200
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 30
+
+Metrics/CyclomaticComplexity:
+  Max: 10
