@@ -1,0 +1,36 @@
+.container.mx-auto
+  section.text-gray-600.body-font.overflow-hidden.px-5.py-24.mx-auto
+      - @jiros.each do |jiro|
+        // ここもパーシャルに切り出す
+        .jiro-card.border.rounded-lg.mx-4.my-6.shadow-lg
+          .my-6.mx-6.flex
+            // 画像のサイズ調整
+            div 
+              = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
+            .ml-5
+              h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
+              .ml-2
+                .flex.my-4
+                  p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
+                  .flex.ml-2 id="jiro-rate-#{jiro.id}"
+                  // のちのち切り出す
+                  javascript:
+                    $("#jiro-rate-#{jiro.id}").raty({
+                      size: 12,
+                      starOff: "#{asset_path('star-off.png')}",
+                      starOn: "#{asset_path('star-on.png')}",
+                      starHalf: "#{asset_path('star-half.png')}",
+                      half: true,
+                      readOnly: true,
+                      score: "#{jiro.rating}",
+                    });
+
+              p.mt-.text-gray-500.text-sm 
+                | 住所 
+                span.text-base ="#{jiro.address}"
+              p.mt-1.text-gray-500.text-xs 
+                | お問い合わせ 
+                span.text-base ="#{jiro.show_tel_number}"
+              p.mt-1.text-gray-500.text-xs
+                | 営業時間 
+                span.text-base="#{jiro.opening_hour_today}"

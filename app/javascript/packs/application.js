@@ -10,8 +10,8 @@ import "channels"
 import "stylesheets/application.css"
 
 window.$ = window.jQuery = require('jquery'); 
-require ('google_maps.js')
 require ('jquery_raty.js')
+require ('google_maps.js')
 
 Rails.start()
 Turbolinks.start()
