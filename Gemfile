@@ -57,6 +57,9 @@ gem 'phony_rails'
 # JavaScript
 gem 'gon'
 
+# Pagination
+gem 'kaminari'
+
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 group :development, :test do
