@@ -1,15 +1,28 @@
 .container.mx-auto
-  section.basic-info
+  section.basic-info.mt-12
     .flex
-      div.jiro-detail.w-1/2
-        h3.font-semibold.text-lg
-          = @jiro.name
-        div.card.border.
-          = image_tag 'sample_image', size: '300x200'
-          .div.jiro-discription 
-            .flex.my-4
-              p.mt-1.text-gray-500.text-lg = @jiro.rating
-              .flex.ml-2 id="jiro-rate-#{@jiro.id}"
+      div.jiro-detail.w-1/2.mx-10
+        h3.font-semibold.text-lg.mb-8 店舗情報
+        div.card.rounded.shadow-lg
+          = image_tag 'sample_image', class: 'w-full'
+          div.jiro-discription.px-6.py-4
+            table
+              tr.mt-1.text-gray-500.text-base 
+                td.px-4.py-1.font-semibold 店名
+                td.text-base = @jiro.name
+              tr.mt-1.text-gray-500.text-base
+                td.px-4.py-1.font-semibold  評価
+                td.flex id="jiro-rate-#{@jiro.id}" 
+                  span.text-base.mr-2 = @jiro.rating
+              tr.mt-1.text-gray-500.text-base 
+                td.px-4.py-1.font-semibold  住所
+                td.text-base= @jiro.address
+              tr.mt-1.text-gray-500.text-base 
+                td.px-4.py-1.font-semibold  お問い合わせ
+                td.text-base= @jiro.show_tel_number
+              tr.mt-1.text-gray-500.text-base 
+                td.px-4.py-1.font-semibold  営業時間
+                td.text-base= @jiro.opening_hour_today
               // のちのち切り出す
               javascript:
                 $("#jiro-rate-#{@jiro.id}").raty({
@@ -22,24 +35,19 @@
                   score: "#{@jiro.rating}",
                 });
 
-            p.mt-.text-gray-500.text-sm 
-              | 住所 
-              span.text-base = @jiro.address
-            p.mt-1.text-gray-500.text-xs 
-              | お問い合わせ 
-              span.text-base = @jiro.show_tel_number
-            p.mt-1.text-gray-500.text-xs
-              | 営業時間 
-              span.text-base= @jiro.opening_hour_today
-      div.location.w-1/2
-        h3.font-semibold.text-lg 位置情報
-        .embed-map.mx-auto
+      div.location.w-1/2.mx-10
+        h3.font-semibold.text-lg.mb-8  位置情報
+        .embed-map
           iframe width="100%" height="400" src="https://www.google.com/maps/embed/v1/place?key=#{ENV['API_KEY']}&q=#{@jiro.name}&center=#{@jiro.latitude},#{@jiro.longitude}&zoom=15"
     dev.gallery
-  section.posts
-  section.near-saunas
+      h3.font-semibold.text-lg.m-10 ギャラリー
+      p.text-center アップデートをお待ちください。
+  section.posts.py-50.m-10
+    h3.font-semibold.text-lg みんなの投稿
+    p.text-center アップデートをお待ちください。
+  section.near-saunas.m-10
     h3.font-semibold.text-lg 近くの温泉
-    p.text-sm 近くに4件の銭湯・サウナがあります。
+    p.text-base.mt-5 近くに#{@saunas.count}件の銭湯・サウナがあります。
     div.sauna-card
       - @saunas.each_with_index do |sauna, i|
         .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
@@ -75,7 +83,7 @@
                   span.text-base="#{sauna.opening_hour_today}"
             div.distance.relative.w-52.ml-auto
               p.text-gray-500.text-sm.absolute.bottom-0.right-0
-                | 中心から約
+                | お店から約
                 span.text-5xl 
                   =" #{sauna.get_distance(@jiro.latitude, @jiro.longitude)} "
                 | m
