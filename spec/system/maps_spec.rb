@@ -11,17 +11,17 @@ RSpec.describe 'Maps', type: :system do
     let!(:far_jiro) { create(:jiro, latitude: 35.6315829, longitude: 139.599121) }
     let!(:far_sauna) { create(:sauna, latitude: 35.6243273, longitude: 139.5967177) }
 
-    before do
-      visit maps_path
-    end
-
     context '中心から半径1.5km以内に二郎とサウナがある場合' do
       before do
-        # 中心の設定
-        page.execute_script("document.getElementById('lat').value = '35.64806'")
-        page.execute_script("document.getElementById('lng').value = '139.7416326'")
-        click_button('周辺の二郎とサウナを探す')
-        expect(current_path).to eq(maps_path), 'mapsページへリダイレクトされていません'
+        # 曜日に対応した営業時間の表示をテストするため日にちを固定する(2022/1/29(土)) 
+        travel_to Date.new(2022, 1, 29) do
+          visit maps_path
+          # 中心の設定
+          page.execute_script("document.getElementById('lat').value = '35.64806'")
+          page.execute_script("document.getElementById('lng').value = '139.7416326'")
+          click_button('周辺の二郎とサウナを探す')
+          expect(current_path).to eq(maps_path), 'mapsページへリダイレクトされていません'
+        end
       end
       it '近い順に店舗の詳細情報が表示されている' do
         # 画像の区別はできないため個数で判定する 1(ピン) + 2(二郎) 2（サウナ）
@@ -43,10 +43,7 @@ RSpec.describe 'Maps', type: :system do
           expect(page.all("img[src$='/assets/star-on-1db01a995e9afbfe51f241d474fcecc932966be0b4d9b3756ef045d441da45fd.png']").count).to eq 3
           expect(page.all("img[src$='/assets/star-half-0280d033e7963483e56e2068002e6f6b44ad2b7ad84dd545ed46ce132c195cfc.png']").count).to eq 1
           expect(page.all("img[src$='/assets/star-off-0779ce5979df9c3156e71339126a81fe743a647fa28bc440f11306e494107ced.png']").count).to eq 1
-          # 曜日に対応した営業時間を表示する
-          travel_to Date.new(2022, 1, 29) do
-            expect(page).to have_content('土曜日: 11時30分～15時00分, 17時00分～20時00分'), '営業時間が正しく表示されていません'
-          end
+          expect(page).to have_content('土曜日: 11時30分～15時00分, 17時00分～20時00分'), '営業時間が正しく表示されていません'
           expect(page).to have_content('中心から約 30 m'), '距離が一致しません'
         end
       end
