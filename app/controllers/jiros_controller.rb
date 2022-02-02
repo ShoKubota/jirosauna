@@ -1,6 +1,7 @@
 class JirosController < ApplicationController
   def index
-    @jiros = Jiro.page(params[:page])
+    @q = Jiro.ransack(params[:q])
+    @jiros = @q.result.page(params[:page])
   end
 
   def show

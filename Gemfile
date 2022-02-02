@@ -60,6 +60,9 @@ gem 'gon'
 # Pagination
 gem 'kaminari'
 
+# Search
+gem 'ransack'
+
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 group :development, :test do
