@@ -1,2 +1,81 @@
-h1 Jiros#show
-p Find me in app/views/jiros/show.html.slim
+.container.mx-auto
+  section.basic-info
+    .flex
+      div.jiro-detail.w-1/2
+        h3.font-semibold.text-lg
+          = @jiro.name
+        div.card.border.
+          = image_tag 'sample_image', size: '300x200'
+          .div.jiro-discription 
+            .flex.my-4
+              p.mt-1.text-gray-500.text-lg = @jiro.rating
+              .flex.ml-2 id="jiro-rate-#{@jiro.id}"
+              // のちのち切り出す
+              javascript:
+                $("#jiro-rate-#{@jiro.id}").raty({
+                  size: 12,
+                  starOff: "#{asset_path('star-off.png')}",
+                  starOn: "#{asset_path('star-on.png')}",
+                  starHalf: "#{asset_path('star-half.png')}",
+                  half: true,
+                  readOnly: true,
+                  score: "#{@jiro.rating}",
+                });
+
+            p.mt-.text-gray-500.text-sm 
+              | 住所 
+              span.text-base = @jiro.address
+            p.mt-1.text-gray-500.text-xs 
+              | お問い合わせ 
+              span.text-base = @jiro.show_tel_number
+            p.mt-1.text-gray-500.text-xs
+              | 営業時間 
+              span.text-base= @jiro.opening_hour_today
+      div.location.w-1/2
+        h3.font-semibold.text-lg 位置情報
+        .embed-map.mx-auto
+          iframe width="100%" height="400" src="https://www.google.com/maps/embed/v1/place?key=#{ENV['API_KEY']}&q=#{@jiro.name}&center=#{@jiro.latitude},#{@jiro.longitude}&zoom=15"
+    dev.gallery
+  section.posts
+  section.near-saunas
+    h3.font-semibold.text-lg 近くの温泉
+    p.text-sm 近くに4件の銭湯・サウナがあります。
+    div.sauna-card
+      - @saunas.each_with_index do |sauna, i|
+        .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
+          .my-6.mx-6.flex
+            div
+              = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
+            .ml-5
+              .flex
+                span.inline-block.text-2xl.text-white.w-10.h-10.bg-blue-600.rounded-full.text-center.leading-relaxed ="#{i + 1}"
+                h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{sauna.name}"
+              .ml-2
+                .flex.my-4
+                  p.mt-1.text-gray-500.text-lg ="#{sauna.rating}"
+                  .flex.ml-2 id="sauna-rate-#{sauna.id}"
+                  javascript:
+                    $("#sauna-rate-#{sauna.id}").raty({
+                      size: 12,
+                      starOff: "#{asset_path('star-off.png')}",
+                      starOn: "#{asset_path('star-on.png')}",
+                      starHalf: "#{asset_path('star-half.png')}",
+                      half: true,
+                      readOnly: true,
+                      score: "#{sauna.rating}",
+                    });
+                p.mt-.text-gray-500.text-sm 
+                  | 住所 
+                  span.text-base ="#{sauna.address}"
+                p.mt-1.text-gray-500.text-xs 
+                  | お問い合わせ 
+                  span.text-base ="#{sauna.show_tel_number}"
+                p.mt-1.text-gray-500.text-xs
+                  | 営業時間 
+                  span.text-base="#{sauna.opening_hour_today}"
+            div.distance.relative.w-52.ml-auto
+              p.text-gray-500.text-sm.absolute.bottom-0.right-0
+                | 中心から約
+                span.text-5xl 
+                  =" #{sauna.get_distance(@jiro.latitude, @jiro.longitude)} "
+                | m
