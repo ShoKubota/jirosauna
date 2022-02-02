@@ -63,6 +63,9 @@ gem 'kaminari'
 # Search
 gem 'ransack'
 
+# ActiveRecord
+gem 'activerecord-import'
+
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 group :development, :test do

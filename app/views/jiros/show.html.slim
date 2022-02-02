@@ -48,7 +48,7 @@
   section.near-saunas.m-10
     h3.font-semibold.text-lg 近くの温泉
     p.text-base.mt-5 近くに#{@saunas.count}件の銭湯・サウナがあります。
-    div.sauna-card
+    div.near-saunas
       - @saunas.each_with_index do |sauna, i|
         .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
           .my-6.mx-6.flex
