@@ -1,0 +1,41 @@
+.container.mx-auto
+  section.text-gray-600.mt-10.mx-24.px-5.py-12.mb-24
+    = render 'shared/search_form'
+    - @jiros.each do |jiro|
+      // ここもパーシャルに切り出す
+      .jiro-card.border-b.mx-4.my-6
+        .my-6.mx-6.flex
+          // 画像のサイズ調整
+          div 
+            = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
+          .ml-5
+            h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
+            .ml-2
+              .flex.my-4
+                p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
+                .flex.ml-2 id="jiro-rate-#{jiro.id}"
+                // のちのち切り出す
+                javascript:
+                  $("#jiro-rate-#{jiro.id}").raty({
+                    size: 12,
+                    starOff: "#{asset_path('star-off.png')}",
+                    starOn: "#{asset_path('star-on.png')}",
+                    starHalf: "#{asset_path('star-half.png')}",
+                    half: true,
+                    readOnly: true,
+                    score: "#{jiro.rating}",
+                  });
+
+            p.mt-.text-gray-500.text-sm 
+              | 住所 
+              span.text-base ="#{jiro.address}"
+            p.mt-1.text-gray-500.text-xs 
+              | お問い合わせ 
+              span.text-base ="#{jiro.show_tel_number}"
+            p.mt-1.text-gray-500.text-xs
+              | 営業時間 
+              span.text-base="#{jiro.opening_hour_today}"
+        div.relative.w-52.ml-auto
+          .absolute.bottom-7.right-7
+            = link_to '詳細を見る', jiro_path(jiro), class: 'text-blue-700 bg-white rounded-lg hover:bg-blue-500 hover:text-white border border-blue-500 font-semibold text-sm px-5 py-2.5 text-center mr-2 mb-2 drop-shadow-md'
+    = paginate @jiros

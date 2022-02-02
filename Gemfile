@@ -57,6 +57,17 @@ gem 'phony_rails'
 # JavaScript
 gem 'gon'
 
+# Pagination
+gem 'kaminari'
+
+# Search
+gem 'ransack'
+
+# ActiveRecord
+gem 'activerecord-import'
+
+gem 'rexml', '~> 3.2', '>= 3.2.5'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   #Debugger
