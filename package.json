@@ -14,6 +14,7 @@
     "jquery": "^3.6.0",
     "postcss": "8",
     "postcss-loader": "4",
+    "rails_admin": "3.0.0-beta",
     "tailwindcss": "2",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
