@@ -7,7 +7,7 @@
         .my-6.mx-6.flex
           // 画像のサイズ調整
           div 
-            = image_tag jiro.appearance_image, class: 'rounded-lg h-48 w-72 object-cover'
+            = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
           .ml-5
             h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
             .ml-2
