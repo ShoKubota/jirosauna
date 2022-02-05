@@ -73,3 +73,18 @@ namespace :get_shop_data_from_places_api do
     end
   end
 end
+
+namespace :get_photos_from_places_photo_api do
+  desc "店舗画像の取得"
+  task get_shop_photo: :environment do
+    shops = Shop.all
+    shops.each do |shop|
+      get_photos_from_photo_reference(shop)
+    end
+  end
+
+  task test: :environment do
+    shop = Shop.second
+    get_photos_from_photo_reference(shop)
+  end
+end
