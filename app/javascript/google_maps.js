@@ -12,6 +12,7 @@ function initMap() {
       streetViewControl: false,
       fullscreenControl: false,
       mapTypeControl: false,
+      gestureHandling: 'greedy',
       zoom: 13,
       styles: [
               {
