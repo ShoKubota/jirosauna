@@ -45,7 +45,7 @@ gem 'nokogiri'
 # Redirection
 gem 'open_uri_redirections'
 
-# Security
+#Security
 gem 'dotenv-rails'
 
 # Geolocation

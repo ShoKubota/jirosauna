@@ -47,14 +47,4 @@ class Shop < ApplicationRecord
     distance = distance_to(point) * 1000
     distance.round(-1)
   end
-
-  def appearance_image
-    if shop_images[0]
-      shop_images[0].image
-    elsif type == 'Jiro'
-      'sample_image.jpg'
-    else
-      'sample_image_sauna.jpg'
-    end
-  end
 end
