@@ -66,6 +66,9 @@ gem 'ransack'
 # ActiveRecord
 gem 'activerecord-import'
 
+# admin
+gem 'rails_admin', ['>= 3.0.0.beta2', '< 4']
+
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 group :development, :test do
