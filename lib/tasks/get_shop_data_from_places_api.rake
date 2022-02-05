@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require './lib/places_api/places_api'
+require './lib/places_api/places_photo_api'
 require 'open-uri'
 require 'open_uri_redirections'
 require 'nokogiri'
 require 'csv'
 
 namespace :get_shop_data_from_places_api do
-  desc 'スクレイピング処理'
+  desc 'スクレイピング処理から店舗情報取得'
   task get_jiro_data: :environment do
     puts '店舗名から二郎系のデータを取得'
     base_url = 'https://ramendb.supleks.jp'
@@ -71,5 +72,20 @@ namespace :get_shop_data_from_places_api do
     saunas.each do |sauna|
       get_places_data_from_tel_number(sauna)
     end
+  end
+end
+
+namespace :get_photos_from_places_photo_api do
+  desc "店舗画像の取得"
+  task get_shop_photo: :environment do
+    shops = Shop.all
+    shops.each do |shop|
+      get_photos_from_photo_reference(shop)
+    end
+  end
+
+  task test: :environment do
+    shop = Shop.second
+    get_photos_from_photo_reference(shop)
   end
 end

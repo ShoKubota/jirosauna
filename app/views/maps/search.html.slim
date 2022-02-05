@@ -12,7 +12,7 @@
           .my-6.mx-6.flex
             // 画像のサイズ調整
             div 
-              = image_tag 'sample_image', size: '200x110', class: 'rounded-lg'
+              = image_tag jiro.appearance_image, size: '200x110', class: 'rounded-lg h-48 w-72 object-cover'
             .ml-5
               .flex
                 span.inline-block.text-2xl.text-white.w-10.h-10.bg-yellow-300.rounded-full.text-center.leading-relaxed ="#{i + 1}"
@@ -57,7 +57,7 @@
         .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
           .my-6.mx-6.flex
             div
-              = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
+              = image_tag sauna.appearance_image, class: 'rounded-lg h-48 w-72 object-cover'
             .ml-5
               .flex
                 span.inline-block.text-2xl.text-white.w-10.h-10.bg-blue-600.rounded-full.text-center.leading-relaxed ="#{i + 1}"

@@ -4,7 +4,7 @@
       div.jiro-detail.w-1/2.mx-10
         h3.font-semibold.text-lg.mb-8 店舗情報
         div.card.rounded.shadow-lg
-          = image_tag 'sample_image', class: 'w-full'
+          = image_tag @jiro.appearance_image, class: 'h-48 w-full object-cover'
           div.jiro-discription.px-6.py-4
             table
               tr.mt-1.text-gray-500.text-base 
@@ -53,7 +53,7 @@
         .sauna-card.border.rounded-lg.mx-4.my-6.shadow-lg id="sauna-#{sauna.id}"
           .my-6.mx-6.flex
             div
-              = image_tag 'sample_image_sauna', size: '200x110', class: 'rounded-lg'
+              = image_tag sauna.appearance_image, size: '200x110', class: 'rounded-lg'
             .ml-5
               .flex
                 span.inline-block.text-2xl.text-white.w-10.h-10.bg-blue-600.rounded-full.text-center.leading-relaxed ="#{i + 1}"
