@@ -1,20 +1,38 @@
-header.text-gray-600.body-font
-  .container.mx-auto.flex.flex-wrap.p-5.flex-col.md:flex-row.items-center
-
-    a.flex.order-first.lg:order-none.lg:w-1/5.title-font.font-medium.items-center.text-gray-900.lg:items-center.lg:justify-center.mb-4.md:mb-0
-      svg.w-10.h-10.text-white.p-2.bg-indigo-500.rounded-full[xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"]
-        path[d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"]
-      span.ml-3.text-xl
-        | ジロサウナー
-    nav.flex.lg:w-2/5.flex-wrap.items-center.text-base.md:ml-auto
-      = link_to 'マップから探す', maps_path, class: 'mr-5 hover:text-gray-900'
-      = link_to '二郎から探す', jiros_path, class: 'mr-5 hover:text-gray-900'
-      a.mr-5.hover:text-gray-900
-        | みんなの投稿
-      a.mr-5.hover:text-gray-900
-        | フィードバック
-    .lg:w-2/5.inline-flex.lg:justify-end.ml-5.lg:ml-0
-      button.inline-flex.items-center.bg-gray-100.border-0.py-1.px-3.focus:outline-none.hover:bg-gray-200.rounded.text-base.mt-4.md:mt-0
-        | ログインする 
-        svg.w-4.h-4.ml-1[fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"]
-          path[d="M5 12h14M12 5l7 7-7 7"]
+header
+  nav.mb-5.text-gray-600.shadow.bg-main-blue.p-4.md:flex.md:items-center.md:justify-between
+    div.flex.justify-between
+      span.text-2xl.font-bold.cursor-pointer.text-accent-yellow
+        | ジロサウナ〜
+      span.mt-1.cursor-pointer.md:hidden.mx-2
+        svg.h-6.w-6 name='menu' id='menu-bar' fill="none" stroke="white" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+          path d=("M4 6h16M4 12h16M4 18h16") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+    ul.md:flex.md:items-center.z-10.md:z-auto.md:static.absolute.bg-main-blue.w-full.left-0.md:w-auto.md:py-0.py-4.md:pl-0.pl-7.hidden
+      li.mx-4.my-6.md:my-0.flex
+        svg.h-6.w-6 fill="none" stroke="#FFFFFF" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+          path d=("M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          path d=("M15 11a3 3 0 11-6 0 3 3 0 016 0z") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        = link_to 'マップから探す', maps_path, class: 'text-white ml-2 text-base hover:text-accent-yellow duration-500'
+      li.mx-4.my-6.md:my-0.flex
+        svg.h-6.w-6 fill="none" stroke="#FFFFFF" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+          path d=("M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        = link_to '二郎から探す', jiros_path, class: 'text-white ml-2 text-base hover:text-accent-yellow duration-500'
+      li.mx-4.my-6.md:my-0.flex
+        svg.h-6.w-6 fill="none" stroke="#FFFFFF" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+          path d=("M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        = link_to 'フィードバック', '#', class: 'text-white ml-2 text-base hover:text-accent-yellow duration-500'
+// 切り出す
+javascript: 
+  let menu = document.getElementById('menu-bar');
+  let list = document.querySelector('ul');
+  let svg_path = menu.childNodes[0]
+  menu.addEventListener('click', () => {
+    list.classList.toggle('hidden');
+    changeIcon();
+  });
+  function changeIcon () {
+    if (svg_path.getAttribute('d') === 'M4 6h16M4 12h16M4 18h16' ) {
+      svg_path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+    } else {
+      svg_path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    }
+  };
