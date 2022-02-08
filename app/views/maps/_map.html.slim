@@ -6,5 +6,5 @@ section.relative.overflow-hidden
         => f.number_field :latitude, id: 'lat', step: '0.0000001', value: '', type: 'hidden'
         => f.number_field :longitude, id: 'lng', step: '0.0000001', value: '', type: 'hidden'
         .text-center.mt-10
-          => f.submit '周辺の二郎とサウナを探す', class: 'text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold text-sm px-5 py-2.5 text-center mr-2 mb-2 drop-shadow-md'
+          => f.submit '周辺の二郎とサウナを探す', class: 'text-white bg-main-blue rounded-full hover:bg-dark-blue font-semibold text-sm px-5 py-2.5 text-center mr-2 mb-2 drop-shadow-md cursor-pointer'
     script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&callback=initMap&libraries=places"
