@@ -1,8 +1,7 @@
 header
-  nav.mb-5.text-gray-600.shadow.bg-main-blue.p-4.md:flex.md:items-center.md:justify-between
+  nav.text-gray-600.shadow.bg-main-blue.p-4.md:flex.md:items-center.md:justify-between
     div.flex.justify-between
-      span.text-2xl.font-bold.cursor-pointer.text-accent-yellow
-        | ジロサウナ〜
+      = link_to 'ジロサウナ〜', root_path, class:"text-2xl font-bold cursor-pointer text-accent-yellow"
       span.mt-1.cursor-pointer.md:hidden.mx-2
         svg.h-6.w-6 name='menu' id='menu-bar' fill="none" stroke="white" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
           path d=("M4 6h16M4 12h16M4 18h16") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
