@@ -59,6 +59,6 @@ class Shop < ApplicationRecord
   end
 
   def shop_type
-    self.type == 'Jiro' ? '二郎系ラーメン' : '銭湯・サウナ'
+    type == 'Jiro' ? '二郎系ラーメン' : '銭湯・サウナ'
   end
 end
