@@ -9,6 +9,7 @@
           span class="#{'bg-yellow-500' if shop.type == 'Jiro'} #{'bg-main-blue' if shop.type == 'Sauna'} inline-block leading-7 text-sm w-7 h-7 text-white rounded-full text-center md:leading-relaxed md:text-2xl md:w-10 md:h-10" ="#{i + 1}"
           h2.font-semibold.leading-7.text-sm.ml-2.md:text-2xl.md:leading-relaxed = "#{shop.name}"
         .ml-2
+          p.text-gray-400.text-xs.mt-1 = "#{shop.address}"
           .flex.my-2.text-sm
             p.text-gray-500 Googleで
             svg.h-5.w-5 fill="#f59e0b" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg" 
