@@ -38,13 +38,10 @@ class Shop < ApplicationRecord
     end
   end
 
-  def get_opening_hour
-    return '現在調査中です。' unless opening_hours
-
+  def to_array_opening_hours
     array_opening_hour = opening_hours.delete('\"[]').split(',')
-    opening_hour = array_opening_hour.slice_when { |_a, b| b.include?('曜日') }.to_a
+    array_opening_hour.slice_when { |_a, b| b.include?('曜日') }.to_a
   end
-
 
   def show_tel_number
     tel_number.present? ? tel_number : '非公開'
