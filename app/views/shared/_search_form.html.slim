@@ -1,4 +1,4 @@
 = search_form_for @q, class: 'flex justify-center' do |f|
   .my-12
-    = f.search_field :name_or_address_cont, class: 'px-10 py-2 border', placeholder: '店舗名・エリア'
-    = f.submit '検索する', class: 'text-white bg-blue-600 px-2 py-2'
+    = f.search_field :name_or_address_cont, class: 'px-10 py-2 mr-1 border rounded-lg', placeholder: '店舗名・エリア'
+    = f.submit '検索する', class: 'text-white bg-main-blue hover:bg-dark-blue cursor-pointer rounded-lg px-2 py-2'

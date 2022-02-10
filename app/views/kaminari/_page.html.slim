@@ -6,6 +6,6 @@
     total_pages  : total number of pages
     per_page     : number of items to fetch per page
     remote       : data-remote
-span class="mx-2 w-10 h-10 text-lg rounded-full inline-block hover:bg-blue-400 hover:text-white leading-loose#{' text-white bg-blue-600 rounded-full' if page.current?}"
+span class="mx-2 w-10 h-10 text-lg rounded-full inline-block hover:bg-dark-blue hover:text-white leading-10#{' text-white bg-main-blue rounded-full' if page.current?}"
   == link_to_unless page.current?, page, url, {remote: remote, rel: page.rel}
 '
