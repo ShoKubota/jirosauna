@@ -13,7 +13,7 @@
   section.gallery.my-5
       h3.font-semibold.text-lg ギャラリー
       .shop-images.grid.grid-cols-2.gap-4.md:grid-cols-3
-        - if @jiro.shop_images[0].image
+        - if @jiro.shop_images[0]
           = image_tag "#{@jiro.shop_images[0].image}", class: 'object-cover rounded-lg shadow my-5'
   section.near-saunas
     h3.font-semibold.text-lg 近くの銭湯・サウナ
@@ -43,6 +43,9 @@
         .flex.text-gray-500.text-base.mb-4.items-center.flex-wrap
           p.px-4.mr-4.font-semibold 営業時間
           div
+          - if @jiro.opening_hours
             - @jiro.get_opening_hour.each do |opening_hour|
               p.text-base= opening_hour.join
+          - else
+            p.text-base 現在調査中です
 

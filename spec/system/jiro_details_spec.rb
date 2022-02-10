@@ -16,7 +16,7 @@ RSpec.describe "Jiro_details", type: :system do
       end
       it '近くの銭湯が表示されている' do
         visit jiro_path(jiro)
-        expect(all('.sauna-card').count).to eq(2)
+        expect(all('.shop-card').count).to eq(2)
         expect(page).to have_content(near_sauna1.name), '近いサウナが表示されていません'
         expect(page).to have_content(near_sauna2.name), '近いサウナが表示されていません'
         expect(page).not_to have_content(far_sauna.name), '近くないサウナが表示されています'
