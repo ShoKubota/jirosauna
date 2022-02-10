@@ -6,6 +6,8 @@ class JirosController < ApplicationController
 
   def show
     @jiro = Jiro.find_by(id: params[:id])
-    @saunas = Sauna.all.within(1.5, origin: [@jiro.latitude, @jiro.longitude]).by_distance(origin: [@jiro.latitude, @jiro.longitude])
+    @longitude = @jiro.longitude
+    @latitude = @jiro.latitude
+    @saunas = Sauna.all.within(1.5, origin: [@latitude, @longitude]).by_distance(origin: [@latitude, @longitude])
   end
 end
