@@ -43,9 +43,9 @@
         .flex.text-gray-500.text-base.mb-4.items-center.flex-wrap
           p.px-4.mr-4.font-semibold 営業時間
           div
-          - if @jiro.opening_hours
-            - @jiro.to_array_opening_hours.each do |opening_hour|
-              p.text-base= opening_hour.join
-          - else
-            p.text-base 現在調査中です
+            - if @jiro.opening_hours
+              - @jiro.to_array_opening_hours.each do |opening_hour|
+                p.text-base= opening_hour.join
+            - else
+              p.text-base 現在調査中です
 
