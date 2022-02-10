@@ -28,21 +28,16 @@ RSpec.describe 'Maps', type: :system do
         within('#map') do
           expect(page.all("img[src$='https://maps.gstatic.com/mapfiles/transparent.png']").count).to eq 5
         end
-        expect(page.all('.jiro-card')[0]).to have_content(near_jiro1.name), '近い順に並んでいません'
-        expect(page.all('.jiro-card')[1]).to have_content(near_jiro2.name), '近い順に並んでいません'
-        expect(page.all('.sauna-card')[0]).to have_content(near_sauna1.name), '近い順に並んでいません'
-        expect(page.all('.sauna-card')[1]).to have_content(near_sauna2.name), '近い順に並んでいません'
+        expect(page.all('.shop-card')[0]).to have_content(near_jiro1.name), '近い順に並んでいません'
+        expect(page.all('.shop-card')[1]).to have_content(near_jiro2.name), '近い順に並んでいません'
+        expect(page.all('.shop-card')[2]).to have_content(near_sauna1.name), '近い順に並んでいません'
+        expect(page.all('.shop-card')[3]).to have_content(near_sauna2.name), '近い順に並んでいません'
         expect(page).not_to have_content(far_jiro.name), '範囲内の二郎店舗が取得できていません'
         expect(page).not_to have_content(far_sauna.name), '範囲内のサウナ店舗が取得できていません'
       end
-      it '詳細情報に住所・お問い合わせ・評価・営業時間・中心からの距離が正しく表示されていること' do
-        within first('.jiro-card') do
-          expect(page).to have_content(near_jiro1.address), '住所が表示されていません'
-          expect(page).to have_content(near_jiro1.tel_number), '電話番号が表示されていません'
+      it '詳細情報に評価・営業時間・中心からの距離が正しく表示されていること' do
+        within first('.shop-card') do
           expect(page).to have_content(near_jiro1.rating), '評価が表示されていません'
-          expect(page.all("img[src$='/assets/star-on-1db01a995e9afbfe51f241d474fcecc932966be0b4d9b3756ef045d441da45fd.png']").count).to eq 3
-          expect(page.all("img[src$='/assets/star-half-0280d033e7963483e56e2068002e6f6b44ad2b7ad84dd545ed46ce132c195cfc.png']").count).to eq 1
-          expect(page.all("img[src$='/assets/star-off-0779ce5979df9c3156e71339126a81fe743a647fa28bc440f11306e494107ced.png']").count).to eq 1
           expect(page).to have_content('土曜日: 11時30分～15時00分, 17時00分～20時00分'), '営業時間が正しく表示されていません'
           expect(page).to have_content('中心から約 30 m'), '距離が一致しません'
         end

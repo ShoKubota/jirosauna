@@ -11,11 +11,6 @@ RSpec.describe "Jiro_details", type: :system do
         visit jiro_path(jiro)
         expect(page).to have_content(jiro.name), '店舗名が表示されていません'
         expect(page).to have_content(jiro.rating), '評価が表示されていません'
-        within ('.jiro-discription') do
-          expect(page.all("img[src$='/assets/star-on-1db01a995e9afbfe51f241d474fcecc932966be0b4d9b3756ef045d441da45fd.png']").count).to eq 3
-          expect(page.all("img[src$='/assets/star-half-0280d033e7963483e56e2068002e6f6b44ad2b7ad84dd545ed46ce132c195cfc.png']").count).to eq 1
-          expect(page.all("img[src$='/assets/star-off-0779ce5979df9c3156e71339126a81fe743a647fa28bc440f11306e494107ced.png']").count).to eq 1
-        end
         expect(page).to have_content(jiro.address), '住所が表示されていません'
         expect(page).to have_content(jiro.tel_number), '電話番号が表示されていません'
       end

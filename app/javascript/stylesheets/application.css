@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .place-text-center::placeholder {
+    text-align: center;
+  }
+}

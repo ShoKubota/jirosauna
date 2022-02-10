@@ -111,7 +111,7 @@ function initMap() {
   // 現在地へ移動ボタン
   const currentLocation = document.createElement('button');
   currentLocation.textContent = '現在地へ移動する';
-  currentLocation.classList.add('block', 'mt-3', 'mr-5', 'text-white', 'text-white', 'bg-blue-700', 'rounded-full', 'hover:bg-blue-800', 'font-semibold', 'text-sm', 'px-5', 'py-2.5', 'text-center', 'drop-shadow-lg')
+  currentLocation.classList.add('block', 'mt-3', 'mr-5', 'text-white', 'text-white', 'bg-main-blue', 'rounded-full', 'hover:bg-dark-blue', 'font-semibold', 'text-sm', 'px-5', 'py-2.5', 'text-center', 'drop-shadow-lg')
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(currentLocation );
 
   currentLocation.addEventListener('click', () => {

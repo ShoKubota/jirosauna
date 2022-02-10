@@ -1,5 +1,5 @@
 .container.mx-auto
-  section.text-gray-600.mt-10.mx-24.px-5.py-12.mb-24
+  section.mt-10.mx-24.px-5.py-12.mb-24
     = render 'shared/search_form'
     - @jiros.each do |jiro|
       // ここもパーシャルに切り出す
@@ -9,22 +9,11 @@
           div 
             = image_tag jiro.appearance_image, class: 'rounded-lg object-cover h-48 w-72'
           .ml-5
-            h2.font-semibold.text-gray-600.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
+            h2.font-semibold.text-2xl.leading-relaxed.ml-2 = "#{jiro.name}"
             .ml-2
               .flex.my-4
+                p.test-sm
                 p.mt-1.text-gray-500.text-lg ="#{jiro.rating}"
-                .flex.ml-2 id="jiro-rate-#{jiro.id}"
-                // のちのち切り出す
-                javascript:
-                  $("#jiro-rate-#{jiro.id}").raty({
-                    size: 12,
-                    starOff: "#{asset_path('star-off.png')}",
-                    starOn: "#{asset_path('star-on.png')}",
-                    starHalf: "#{asset_path('star-half.png')}",
-                    half: true,
-                    readOnly: true,
-                    score: "#{jiro.rating}",
-                  });
 
             p.mt-.text-gray-500.text-sm 
               | 住所 

@@ -57,4 +57,8 @@ class Shop < ApplicationRecord
       'sample_image_sauna.jpg'
     end
   end
+
+  def shop_type
+    type == 'Jiro' ? '二郎系ラーメン' : '銭湯・サウナ'
+  end
 end
