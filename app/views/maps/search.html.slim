@@ -4,11 +4,11 @@
     - unless @jiros.nil? && @saunas.nil?
       h2.my-10.font-semibold.text-3xl.text-center 二郎系ラーメン
       - if @jiros.present?
-        == render 'maps/shops', shops: @jiros 
+        == render 'shared/shops', shops: @jiros 
       - else
         p.text-center 近くの二郎系は見つかりませんでした
       h2.my-10.font-semibold.text-3xl.text-center 銭湯・サウナ
       - if @saunas.present?
-        == render 'maps/shops', shops: @saunas 
+        == render 'shared/shops', shops: @saunas 
       - else
         p.text-center 近くの銭湯・サウナは見つかりませんでした

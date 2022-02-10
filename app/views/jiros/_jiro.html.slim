@@ -1,6 +1,6 @@
 
 = link_to jiro_path(jiro) do
-  .jiro-card.border.rounded-lg.my-2.shadow-lg.bg-white
+  .jiro-card.border.rounded-lg.my-2.shadow-lg.bg-white.hover:text-gray-400
     .my-2.mx-2.flex
       // 画像のサイズ調整
       .appearance-image.h-36.w-36.md:w-72
@@ -17,8 +17,3 @@
           p.mt-1.text-gray-500.text-xs
             | 営業時間 
             span.text-sm.md:text-base ="#{jiro.opening_hour_today}"
-          / p.text-gray-500.text-xs
-          /   | 中心から約
-          /   span.text-lg
-          /     =" #{jiro.get_distance(@latitude, @longitude)} "
-          /   | m
