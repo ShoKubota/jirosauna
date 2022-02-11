@@ -6,4 +6,9 @@ class StaticPagesController < ApplicationController
     @jiros = Jiro.all
     @saunas = Sauna.all
   end
+
+  def terms; end
+
+  def privacy_policy; end
+
 end
