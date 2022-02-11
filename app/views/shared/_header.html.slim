@@ -1,9 +1,9 @@
 header
-  nav.text-gray-600.shadow.bg-main-blue.p-4.md:flex.md:items-center.md:justify-between
+  nav.text-gray-600.shadow.bg-main-blue.py-3.px-4.md:px-16.md:flex.md:items-center.md:justify-between
     div.flex.justify-between
-      = link_to 'ジロサウナ〜', root_path, class:"text-2xl font-bold cursor-pointer text-accent-yellow"
+      = link_to image_tag('logo.png', class:'md:w-52 w-36'), root_path, class:"text-2xl font-bold cursor-pointer text-accent-yellow"
       span.mt-1.cursor-pointer.md:hidden.mx-2
-        svg.h-6.w-6 name='menu' id='menu-bar' fill="none" stroke="white" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+        svg.h-8.w-8 name='menu' id='menu-bar' fill="none" stroke="white" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
           path d=("M4 6h16M4 12h16M4 18h16") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
     ul.md:flex.md:items-center.z-10.md:z-auto.md:static.absolute.bg-main-blue.w-full.left-0.md:w-auto.md:py-0.py-4.md:pl-0.pl-7.hidden
       li.mx-4.my-6.md:my-0.flex
