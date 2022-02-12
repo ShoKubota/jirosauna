@@ -11,7 +11,13 @@ module.exports = {
       colors: {
         'dark-blue': '#0094D3',
         'main-blue': '#009fed',
-        'accent-yellow': '#FAF000'
+        'accent-yellow': '#FAF000',
+        'dark-yellow': '#ffd100'
+      },
+      backgroundImage: {
+        'main-img-1': "url('/app/assets/images/main_background_1.jpg')",
+        'main-img-2': "url('/app/assets/images/main_background_2.jpg')",
+        'main-img-3': "url('/app/assets/images/main_background_3.jpg')"
       },
     },
   },
