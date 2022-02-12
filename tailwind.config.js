@@ -19,6 +19,9 @@ module.exports = {
         'main-img-2': "url('/app/assets/images/main_background_2.jpg')",
         'main-img-3': "url('/app/assets/images/main_background_3.jpg')"
       },
+      spacing: {
+        'sidebar': '500px'
+      },
     },
   },
   variants: {
