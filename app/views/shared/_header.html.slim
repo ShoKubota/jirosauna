@@ -35,18 +35,4 @@ header
         svg.h-6.w-6 fill="none" stroke="#FFFFFF" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
           path d=("M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
         = link_to 'フィードバック', '#', class: 'text-white ml-2 text-base font-semibold hover:text-accent-yellow duration-500'
-// 切り出す
-javascript: 
-  var menu = document.getElementById('menu-bar');
-  var closeIcon = document.getElementById('close');
-  var list = document.getElementById('sp_list');
-  menu.addEventListener('click', () => {
-    list.classList.remove('-right-sidebar');
-    list.classList.remove('opacity-0');
-    list.classList.add('right-0');
-  });
-  closeIcon.addEventListener('click', () => {
-    list.classList.remove('right-0');
-    list.classList.add('-right-sidebar');
-    list.classList.add('opacity-0');
-  });
+
