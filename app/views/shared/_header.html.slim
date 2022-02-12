@@ -37,9 +37,9 @@ header
         = link_to 'フィードバック', '#', class: 'text-white ml-2 text-base font-semibold hover:text-accent-yellow duration-500'
 // 切り出す
 javascript: 
-  let menu = document.getElementById('menu-bar');
-  let closeIcon = document.getElementById('close');
-  let list = document.getElementById('sp_list');
+  var menu = document.getElementById('menu-bar');
+  var closeIcon = document.getElementById('close');
+  var list = document.getElementById('sp_list');
   menu.addEventListener('click', () => {
     list.classList.remove('-right-sidebar');
     list.classList.remove('opacity-0');
