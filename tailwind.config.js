@@ -15,9 +15,9 @@ module.exports = {
         'dark-yellow': '#ffd100'
       },
       backgroundImage: {
-        'main-img-1': "url('/app/assets/images/main_background_1.jpg')",
-        'main-img-2': "url('/app/assets/images/main_background_2.jpg')",
-        'main-img-3': "url('/app/assets/images/main_background_3.jpg')"
+        'main-img-1': "url('/images/main_background_1.jpg')",
+        'main-img-2': "url('/images/main_background_2.jpg')",
+        'main-img-3': "url('/images/main_background_3.jpg')"
       },
       spacing: {
         'sidebar': '500px'
