@@ -14,7 +14,8 @@ RSpec.describe "Jiros", type: :system do
       it 'ページネーション（1ページ20件）が機能していること' do
         visit jiros_path
         click_link '2'
-        expect(all('.jiro-card').count).to eq(10), 'ページネーションが機能していません'
+        sleep 1 # ページ遷移を待つ
+        expect(all('.jiro-card').count).to eq(10), 'ぺージネーションが機能していません'
       end
     end
   end
