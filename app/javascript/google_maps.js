@@ -131,7 +131,7 @@ function initMap() {
         },
       );
     } else {
-      return false
+      alert('あなたの端末では、現在位置を取得できません。') ;
     }
   });
 
