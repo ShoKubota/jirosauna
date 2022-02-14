@@ -1,25 +1,26 @@
 - shops.each_with_index do |shop, i|
-  .shop-card.border.rounded-lg.my-2.shadow-lg.bg-white id="#{shop.type.downcase}-#{shop.id}"
-    .my-2.mx-2.flex
-      // 画像のサイズ調整
-      .appearance-image.h-36.w-36.md:w-72
-        = image_tag shop.appearance_image, class: 'rounded-lg object-cover h-full w-full'
-      .ml-5.my-auto.w-2/3
-        .flex
-          span class="#{'bg-yellow-500' if shop.type == 'Jiro'} #{'bg-main-blue' if shop.type == 'Sauna'} inline-block leading-7 text-sm w-7 h-7 text-white rounded-full text-center md:leading-relaxed md:text-2xl md:w-10 md:h-10" ="#{i + 1}"
-          h2.font-semibold.leading-7.text-sm.ml-2.md:text-2xl.md:leading-relaxed = "#{shop.name}"
-        .ml-2
-          p.text-gray-400.text-xs.mt-1 = "#{shop.address}"
-          .flex.my-2.text-sm
-            p.text-gray-500 Googleで
-            svg.h-5.w-5 fill="#f59e0b" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg" 
-              path d=("M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z") 
-            p.text-yellow-500.font-semibold ="#{shop.rating}"
-          p.mt-1.text-gray-500.text-xs
-            | 営業時間 
-            span.text-sm.md:text-base ="#{shop.opening_hour_today}"
-          p.text-gray-500.text-xs
-            | 中心から約
-            span.text-lg
-              =" #{shop.get_distance(@latitude, @longitude)} "
-            | m
+  = link_to "#{shop.type.downcase}s/#{shop.id}" do
+    .shop-card.border.rounded-lg.my-2.shadow-lg.bg-white.hover:text-gray-400 id="#{shop.type.downcase}-#{shop.id}"
+      .my-2.mx-2.flex
+        // 画像のサイズ調整
+        .appearance-image.h-36.w-36.md:w-72
+          = image_tag shop.appearance_image, class: 'rounded-lg object-cover h-full w-full'
+        .ml-5.my-auto.w-2/3
+          .flex
+            span class="#{'bg-yellow-500' if shop.type == 'Jiro'} #{'bg-main-blue' if shop.type == 'Sauna'} inline-block leading-7 text-sm w-7 h-7 text-white rounded-full text-center md:leading-relaxed md:text-2xl md:w-10 md:h-10" ="#{i + 1}"
+            h2.font-semibold.leading-7.text-sm.ml-2.md:text-2xl.md:leading-relaxed = "#{shop.name}"
+          .ml-2
+            p.text-gray-400.text-xs.mt-1 = "#{shop.address}"
+            .flex.my-2.text-sm
+              p.text-gray-500 Googleで
+              svg.h-5.w-5 fill="#f59e0b" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg" 
+                path d=("M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z") 
+              p.text-yellow-500.font-semibold ="#{shop.rating}"
+            p.mt-1.text-gray-500.text-xs
+              | 営業時間 
+              span.text-sm.md:text-base ="#{shop.opening_hour_today}"
+            p.text-gray-500.text-xs
+              | 中心から約
+              span.text-lg
+                =" #{shop.get_distance(@latitude, @longitude)} "
+              | m
