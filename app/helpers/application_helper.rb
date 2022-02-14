@@ -12,7 +12,7 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'ジロサウナ〜',
-      title: '二郎とサウナを同時に探せるサイト',
+      title: '周辺の二郎とサウナを一瞬で検索',
       reverse: true,
       separator: '|',
       description: '「ジロサウナ〜」は、首都圏400件以上の二郎系ラーメンとサウナを網羅した二郎とサウナを同時に探せる検索サイト。マップや店舗から最高の組み合わせを探すことができます。',
@@ -24,7 +24,7 @@ module ApplicationHelper
       ],
       og: {
         site_name: 'ジロサウナ〜',
-        title: '二郎とサウナを同時に探せるサイト',
+        title: '周辺の二郎とサウナを一瞬で検索',
         description: '「ジロサウナ〜」は、首都圏400件以上の二郎系ラーメンとサウナを網羅した二郎とサウナを同時に探せる検索サイト。マップや店舗から最高の組み合わせを探すことができます。',
         type: 'website',
         url: request.original_url,
@@ -33,6 +33,7 @@ module ApplicationHelper
       twitter: {
         card: 'summary_large_image',
         site: '@botcher_matsu',
+        title: 'ジロサウナ〜 | 周辺の二郎とサウナを一瞬で検索',
         image: image_url('ogp.png')
       }
     }
