@@ -1,0 +1,2 @@
+module SaunasHelper
+end
