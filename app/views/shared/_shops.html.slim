@@ -1,5 +1,5 @@
 - shops.each_with_index do |shop, i|
-  = link_to "#{shop.type.downcase}s/#{shop.id}" do
+  = link_to "/#{shop.type.downcase}s/#{shop.id}" do
     .shop-card.border.rounded-lg.my-2.shadow-lg.bg-white.hover:text-gray-400 id="#{shop.type.downcase}-#{shop.id}"
       .my-2.mx-2.flex
         // 画像のサイズ調整
