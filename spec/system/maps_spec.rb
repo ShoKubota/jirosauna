@@ -42,6 +42,10 @@ RSpec.describe 'Maps', type: :system do
           expect(page).to have_content('中心から約 30 m'), '距離が一致しません'
         end
       end
+      it '検索結果の店舗をクリックすると、詳細ページへ遷移できる' do
+        click_link near_jiro1.name
+        expect(current_path).to eq(jiro_path(near_jiro1))
+      end
     end
     context '中心から半径1.5km以内に該当店舗（サウナ・二郎）がない場合' do
       it 'ピンは差されず「見つかりませんでした」と表示される' do
