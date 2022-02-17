@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "Jiro_details", type: :system do
-  let!(:jiro) { create(:jiro) }
-  let!(:near_sauna1) { create(:sauna, latitude: 35.6505895, longitude: 139.7343765) }
-  let!(:near_sauna2) { create(:sauna, latitude: 35.6549135, longitude: 139.7400412) }
-  let!(:far_sauna) { create(:sauna, latitude: 35.6243273, longitude: 139.5967177) }
   describe '二郎詳細機能' do
+    let!(:jiro) { create(:jiro) }
+    let!(:near_sauna1) { create(:sauna, latitude: 35.6505895, longitude: 139.7343765) }
+    let!(:near_sauna2) { create(:sauna, latitude: 35.6549135, longitude: 139.7400412) }
+    let!(:far_sauna) { create(:sauna, latitude: 35.6243273, longitude: 139.5967177) }
     context 'jiro#showへアクセスする' do
       it '店舗情報が表示されている' do
         visit jiro_path(jiro)

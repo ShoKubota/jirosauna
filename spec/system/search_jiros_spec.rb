@@ -1,10 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "SearchJiros", type: :system do
-  let!(:jiro_tokyo) { create(:jiro, :tokyo, name: 'ラーメン二郎') }
-  let!(:jiro_kanagawa) { create(:jiro, :kanagawa, name: 'ラーメン豚山') }
-
   describe '二郎検索機能' do
+    let!(:jiro_tokyo) { create(:jiro, :tokyo, name: 'ラーメン二郎') }
+    let!(:jiro_kanagawa) { create(:jiro, :kanagawa, name: 'ラーメン豚山') }
     context '名前であいまい検索する' do
       it 'キーワードに一致する名前の店舗が表示される' do
         visit jiros_path
