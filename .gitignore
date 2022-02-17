@@ -73,6 +73,3 @@ er.drawio
 
 # Ignore rubocop_todo
 .rubocop_todo.yml
-
-# Ignore dumpfile
-jirosauna.dump
