@@ -1,0 +1,6 @@
+- set_meta_tags title: '銭湯・サウナ店舗一覧', noindex: true
+.container.mx-auto.mt-24
+  section.mx-5.mb-10
+    = render 'shared/search_form'
+    = render @saunas
+  = paginate @saunas
