@@ -21,6 +21,11 @@ RSpec.describe "Jiro_details", type: :system do
         expect(page).to have_content(near_sauna2.name), '近いサウナが表示されていません'
         expect(page).not_to have_content(far_sauna.name), '近くないサウナが表示されています'
       end
+      it '近くの二郎をクリックすると、詳細ページへ遷移する' do
+        visit jiro_path(jiro)
+        click_link near_sauna1.name
+        expect(current_path).to eq(sauna_path(near_sauna1))
+      end
     end
   end
 end
