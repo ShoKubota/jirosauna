@@ -211,5 +211,3 @@ function clickMap(lat_lng, map){
   });
 
 }
-
-// 現在地へ移動するボタン
