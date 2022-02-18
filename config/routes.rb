@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :jiros, only: %i[index show]
   resources :saunas, only: %i[index show]
   get 'maps', to: 'maps#search'
+  get '/:id' => "shortener/shortened_urls#show"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
