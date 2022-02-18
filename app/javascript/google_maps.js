@@ -118,7 +118,7 @@ function initMap() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          const pos = {
+          var pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
@@ -129,9 +129,22 @@ function initMap() {
             icon: '/assets/current_icon.png'
           });
         },
+        (error) => {
+          var errorInfo = [
+            '原因不明のエラーが発生しました',
+            '位置情報の取得が許可されませんでした。設定を確認してください。',
+            '電波状況などで位置情報が取得できませんでした',
+            '位置情報の取得に時間がかかり過ぎてタイムアウトしました'
+          ];
+          var errorNum = error.code;
+
+          var errorMessage = errorInfo[errorNum]
+
+          alert(errorMessage);
+        }
       );
     } else {
-      alert('あなたの端末では、現在位置を取得できません。') ;
+      window.alert('お使いの端末では対応しておりません...。');
     }
   });
 
