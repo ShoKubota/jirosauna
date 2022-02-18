@@ -56,10 +56,8 @@ class Shop < ApplicationRecord
   def appearance_image
     if shop_images[0]
       shop_images[0].image
-    elsif type == 'Jiro'
-      'sample_image.jpg'
     else
-      'sample_image_sauna.jpg'
+      'no_image.png'
     end
   end
 
