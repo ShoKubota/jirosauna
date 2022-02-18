@@ -36,6 +36,7 @@ class MapsController < ApplicationController
     prefecture = geoapi_data['response']['location'][0]['prefecture']
     city = geoapi_data['response']['location'][0]['city']
     town = geoapi_data['response']['location'][0]['town']
-    area = "#{prefecture}#{city}#{town}"
+
+    "#{prefecture}#{city}#{town}"
   end
 end
