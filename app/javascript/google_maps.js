@@ -123,11 +123,13 @@ function initMap() {
             lng: position.coords.longitude,
           };
           map.setCenter(pos);
-          var marker = new google.maps.Marker({
-            map : map,             // 対象の地図オブジェクト
-            position : pos,  // 緯度・経度
-            icon: '/assets/current_icon.png'
-          });
+          // pinを更新
+          updatePin(pos, map);
+          // サークルを更新
+          updateCircle(pos.lat, pos.lng, map);
+          // フォームに値を入れる
+          document.getElementById('lat').value = pos.lat;
+          document.getElementById('lng').value = pos.lng;
         },
         (error) => {
           var errorInfo = [
@@ -187,14 +189,14 @@ function initMap() {
 }
 window.initMap = initMap;
 
-function clickMap(lat_lng, map){
+clickMap = (lat_lng, map) => {
   lat = lat_lng.lat();
   lng = lat_lng.lng();
 
   lat = Math.floor(lat * 10000000) / 10000000;
   lng = Math.floor(lng * 10000000) / 10000000;
 
-  //座標を表示する
+  //座標をhidden formに入力する
   document.getElementById('lat').value = lat;
   document.getElementById('lng').value = lng;
 
@@ -202,13 +204,21 @@ function clickMap(lat_lng, map){
   map.panTo(lat_lng);
 
   // マーカーの更新
+  updatePin(lat_lng, map);
+
+  updateCircle(lat, lng, map);
+}
+
+updatePin = (pos, map) => {
   pin.setMap(null);
   pin = null;
   pin = new google.maps.Marker({
-    position: lat_lng,
+    position: pos,
     map: map
   });
+}
 
+updateCircle = (lat, lng, map) => {
   circle.setMap(null);
   circle = null;
   circle = new google.maps.Circle({
@@ -222,5 +232,4 @@ function clickMap(lat_lng, map){
     strokeOpacity: 0.6,
     strokeWeight: 0.7,
   });
-
 }
