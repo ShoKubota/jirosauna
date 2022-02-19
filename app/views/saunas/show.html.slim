@@ -17,7 +17,7 @@
         - if @sauna.shop_images[0]
           = image_tag "#{@sauna.shop_images[0].image}", class: 'object-cover rounded-lg shadow my-5'
   section.near-saunas
-    h3.font-semibold.text-lg 近くの銭湯・サウナ
+    h3.font-semibold.text-lg 近くの二郎系ラーメン
     p.text-base.my-5 近くに #{@jiros.count} 件の銭湯・サウナがあります。
     div.near-saunas
       = render 'shared/shops', shops: @jiros
