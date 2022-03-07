@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
+  resource :profile, only: %i[show edit update]
+  resources :users, only: %i[new create destroy]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'static_pages#top'
   get 'terms', to: 'static_pages#terms'
