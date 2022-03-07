@@ -37,6 +37,9 @@ gem 'enum_help'
 # Authentication
 gem 'sorcery'
 
+# Localization
+gem 'rails-i18n'
+
 # UI/UX
 gem 'slim-rails'
 gem 'html2slim'
