@@ -4,7 +4,7 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_back_or_to profile_path(@user)
+      redirect_back_or_to profile_path
     else
       render :new
     end
