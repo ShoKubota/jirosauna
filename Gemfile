@@ -34,6 +34,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Model
 gem 'enum_help'
 
+# Authentication
+gem 'sorcery'
+
+# Localization
+gem 'rails-i18n'
+
 # UI/UX
 gem 'slim-rails'
 gem 'html2slim'

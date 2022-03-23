@@ -67,4 +67,5 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   # 時間固定
   config.include ActiveSupport::Testing::TimeHelpers
+  config.include LoginModule
 end

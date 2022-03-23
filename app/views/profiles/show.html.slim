@@ -1,0 +1,8 @@
+- set_meta_tags title: 'プロフィール'
+.container.mx-auto.mt-24
+  section.mx-auto.mb-10.bg-white.w-full.rounded-lg
+    .profile-info.p-10
+      .flex
+        = image_tag 'logo_main.png', size: '100x100', class: 'rounded-full'
+        .ml-10.text-4xl = @user.name
+      = link_to '編集する', edit_profile_path, class: 'ml-36 p-4 rounded-lg text-white bg-green-400'
