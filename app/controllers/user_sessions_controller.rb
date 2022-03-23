@@ -6,6 +6,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_back_or_to profile_path
     else
+      flash.now[:danger] = 'ログインできませんでした'
       render :new
     end
   end

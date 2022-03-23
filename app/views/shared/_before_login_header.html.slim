@@ -19,7 +19,7 @@ header
           path d=("M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
         = link_to 'サウナから探す', saunas_path, class: 'text-white ml-2 text-base hover:text-accent-yellow duration-500'
       li.mx-4.my-6.md:my-0.flex 
-        = button_to 'ログインする', login_path, class: 'bg-dark-yellow text-white font-semibold py-2 px-4 rounded-3xl cursor-pointer ml-2 text-base hover:bg-yellow-400 duration-500'
+        = link_to 'ログインする', login_path, class: 'bg-dark-yellow text-white font-semibold py-2 px-4 rounded-3xl cursor-pointer ml-2 text-base hover:bg-yellow-400 duration-500'
 
     ul.md:hidden.z-20.bg-main-blue.min-h-screen.w-3/5.absolute.top-0.-right-sidebar.shadow-2xl.transition-all.duration-300.ease-in.opacity-0 id='sp_list'
       svg.h-8.w-8.ml-auto.mt-3.mr-5.cursor-pointer id='close' fill="none" stroke="white" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 

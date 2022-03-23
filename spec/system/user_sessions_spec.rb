@@ -26,6 +26,7 @@ RSpec.describe "UserSessions", type: :system do
             click_button 'ログインする'
           end
           expect(current_path).to eq login_path
+          expect(page).to have_content('ログインできませんでした')
         end
       end
       context 'パスワードが未入力' do
@@ -36,6 +37,7 @@ RSpec.describe "UserSessions", type: :system do
             click_button 'ログインする'
           end
           expect(current_path).to eq login_path
+          expect(page).to have_content('ログインできませんでした')
         end
       end
     end
