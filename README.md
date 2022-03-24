@@ -1,6 +1,9 @@
 # ジロサウナー
 ![ロゴ – 9](https://user-images.githubusercontent.com/63547176/159874882-357ee159-befe-4d19-8e5e-1d45da9b2cb5.png)
-https://www.jirosauna.com/
+【サービスURL】 https://www.jirosauna.com/
+___
+* UU数 1100
+* 累計PV数 6000
 
 # サービス概要：
 「ジロサウナ〜」はマップからポイントを指定してボタンを押すと周囲の二郎系とサウナを一瞬で検索することができるアプリです。
@@ -44,6 +47,3 @@ https://www.jirosauna.com/
 # 関連記事・その他
 * [【個人開発】近くの二郎とサウナを一瞬で検索し、黄金ムーブがすぐできるアプリを作った（Qiita記事）](https://qiita.com/botcher_matsu/items/b87672215855730a3947)
 * [大学生が近くの二郎とサウナを一瞬で検索し、黄金ムーブがすぐできるアプリを作るまで（note記事）](https://note.com/taiju365/n/naba8d1d016e5)
-___
-* UU数 1100
-* 累計PV数 6000
