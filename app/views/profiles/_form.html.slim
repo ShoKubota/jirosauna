@@ -1,0 +1,10 @@
+= form_with model: @user, url: profile_path, local: true do |f|
+  == render 'shared/error_messages', object: f.object
+  .flex.flex-col.m-7
+    .mb-6
+      = f.label :name, 'ユーザー名', class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.text_field :name, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+    .mb-6
+      = f.label :email, 'メールアドレス', class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.text_field :email, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+    = f.button '更新する', class: 'text-white bg-main-blue rounded-full hover:bg-dark-blue font-semibold text-base px-5 py-2.5 text-center mr-2 shadow-md cursor-pointer'
