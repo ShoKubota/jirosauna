@@ -414,6 +414,7 @@ DEPENDENCIES
   kaminari
   listen (~> 3.3)
   meta-tags
+  mini_magick
   nokogiri
   open_uri_redirections
   pg (~> 1.1)

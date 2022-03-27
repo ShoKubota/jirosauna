@@ -83,6 +83,7 @@ gem 'shortener'
 
 # Image upload
 gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
 
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
