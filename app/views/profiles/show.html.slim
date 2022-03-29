@@ -3,6 +3,6 @@
   section.mx-auto.mb-10.bg-white.w-full.rounded-lg
     .profile-info.p-10
       .flex
-        = image_tag @user.avatar.thumb.url, size: '100x100', class: 'rounded-full'
+        = image_tag @user.avatar.thumb.url, size: '100x100', class: 'rounded-full w-32 h-32 object-cover mb-6'
         .ml-10.text-4xl = @user.name
-      = link_to '編集する', edit_profile_path, class: 'ml-36 p-4 rounded-lg text-white bg-green-400'
+      = link_to '編集する', edit_profile_path, class: 'p-4 rounded-lg text-white bg-green-400 ml-4'
