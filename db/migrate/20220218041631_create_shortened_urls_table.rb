@@ -27,7 +27,7 @@ class CreateShortenedUrlsTable < ActiveRecord::Migration[4.2]
     # also make sure the unique keys are actually unique
     add_index :shortened_urls, :unique_key, unique: true
     add_index :shortened_urls, :url, length: 2083
-    add_index :shortened_urls, [:owner_id, :owner_type]
+    add_index :shortened_urls, %i[owner_id owner_type]
     add_index :shortened_urls, :category
   end
 end
