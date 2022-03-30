@@ -6,14 +6,10 @@ class ProfilesController < ApplicationController
   def edit; end
 
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.update(user_params)
+      redirect_to profile_path
+    else
+      render :edit
     end
   end
 
@@ -21,6 +17,10 @@ class ProfilesController < ApplicationController
 
   def set_user
     @user = User.find(current_user.id)
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :avatar)
   end
 
 end

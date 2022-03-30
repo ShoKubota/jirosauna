@@ -1,2 +1,6 @@
-h1 Profile#edit
-p Find me in app/views/profile/edit.html.slim
+- set_meta_tags title: 'プロフィール編集'
+.container.mx-auto.mt-24
+  section.mx-auto.mb-10.bg-white.w-full.md:w-1/3.rounded-lg
+    .py-10
+      h2.text-3xl.font-semibold.text-center.mb-5 プロフィール
+      = render 'form'
