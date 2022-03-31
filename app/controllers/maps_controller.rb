@@ -2,22 +2,22 @@
 
 class MapsController < ApplicationController
   def search
+    search_radius = 1.5
+    default_lat = 35.64806
+    default_lng = 139.7416326
     if params[:q]
       @latitude = geo_params[:latitude].to_f
       @longitude = geo_params[:longitude].to_f
-
-      @jiros = Jiro.all.within(1.5, origin: [@latitude, @longitude]).by_distance(origin: [@latitude, @longitude])
-      @saunas = Sauna.all.within(1.5, origin: [@latitude, @longitude]).by_distance(origin: [@latitude, @longitude])
-
+      @jiros = Jiro.all.within(search_radius, origin: [@latitude, @longitude]).by_distance(origin: [@latitude, @longitude])
+      @saunas = Sauna.all.within(search_radius, origin: [@latitude, @longitude]).by_distance(origin: [@latitude, @longitude])
       @area = search_area(@latitude, @longitude)
-
       gon.latitude = @latitude
       gon.longitude = @longitude
       gon.jiros = @jiros
       gon.saunas = @saunas
     else
-      gon.latitude = 35.64806
-      gon.longitude = 139.7416326
+      gon.latitude = default_lat
+      gon.longitude = default_lng
     end
   end
 
