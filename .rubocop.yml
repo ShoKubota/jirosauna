@@ -29,7 +29,7 @@ Layout/LineLength:
   Max: 200
 
 Metrics/AbcSize:
-  Max: 30
+  Max: 35
 
 Metrics/MethodLength:
   CountComments: false
