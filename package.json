@@ -24,5 +24,6 @@
   "devDependencies": {
     "@webpack-cli/serve": "^1.6.0",
     "webpack-dev-server": "^3"
-  }
+  },
+  "packageManager": "yarn@1.22.11"
 }
